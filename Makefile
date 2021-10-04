@@ -1,0 +1,39 @@
+LIBFT = libft/atoi.c \
+
+OPERATIONS = operations/ft_sa.c \
+
+SRCS =	$(LIBFT) \
+		$(OPERATIONS) \
+		main.c
+
+BONUS = 
+
+INCLUDE =	-I include
+
+OBJS	=		$(SRCS:.c=.o)
+OBJS_BONUS =	$(BONUS:.c=.o)
+EXEC = push_swap
+
+NAME	=		push_swap
+CC		=		gcc
+FLAGS	=		-Wall -Werror -Wextra
+RM		=		rm -f
+
+.c.o:
+			$(CC) $(FLAGS) -I include $< -o $(<:.c=.o)
+
+$(NAME):	$(OBJS)
+			$(CC) $(FLAGS) $(OBJS) -o $(EXEC)
+
+all:		$(NAME)
+
+bonus:		$(OBJS_BONUS)
+			$(CC) $(FLAGS) $(OBJS_BONUS)
+
+clean:
+			$(RM) $(OBJS) $(OBJS_BONUS)
+
+fclean:		clean
+			$(RM) $(EXEC)
+
+re:			fclean all
