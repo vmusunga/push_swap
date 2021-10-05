@@ -1,4 +1,5 @@
-LIBFT = libft/atoi.c \
+LIBFT = libft/ft_lstadd_back.c \
+			libft/ft_strlen.c
 
 OPERATIONS = operations/ft_sa.c \
 
