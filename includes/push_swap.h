@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/06 16:28:39 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/06 17:27:14 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	test_list_filling(t_list *list);
 //LIBFT
 size_t		ft_strlen(const char *str);
 int			ft_atoi(const char *str);
+char		**ft_split(char const *s, char c);
 
 //LIST_OPS
 t_list	*ft_lstnew(int tab);

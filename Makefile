@@ -1,5 +1,6 @@
 LIBFT =		libft/ft_strlen.c \
-			libft/ft_atoi.c
+			libft/ft_atoi.c \
+			libft/ft_split.c \
 
 LIST_OPS = list_ops/ft_lstnew.c \
 			list_ops/ft_lstadd_back.c\

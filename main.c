@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/06 16:31:28 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/06 18:05:52 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,41 @@ void	test_list_filling(t_list *list)
 	return ;
 }
 
+int	*char_to_int_convert(char *input)
+{
+	char **tab_char;
+	int *new;
+	int len;
+	int i;
+
+	len = 0;
+	tab_char = ft_split(input, ' ');
+	while (tab_char[len])
+		len++;
+
+	new = malloc(sizeof(int) * len);
+	i = 0;
+	while (tab_char[i])
+	{
+		new[i] = ft_atoi(tab_char[i]);
+		i++;
+	}
+	new[i] = 0;
+	free(tab_char);
+	return (new);
+}
+
 int	*single_argv(char **argv)			// ERROR CHECK NEEDED //
 {
 	int *tab;
+	char *input;
 	int i;
 	
 	i = 0;
-	tab = malloc(sizeof(int) * ft_strlen(argv[1]));
+	input = argv[1];
+	tab = char_to_int_convert(input);
 	if (!tab)
 		return (NULL);
-	while (argv[1][i])
-	{
-		tab[i] = argv[1][i] - 48;							//ATOI!
-		i++;
-	}
-	tab[i] = 0;
 	return (tab);
 }
 
@@ -58,10 +78,9 @@ int	main(int ac, char **argv)
 	//if (!(stack_a = malloc(sizeof(t_list) * len)))
 	//	return(-1);
 	i = 0;
-	while (i < len)
+	while (i < 4)								// LEN!! int tab
 	{
 		ft_lstadd_back(&stack_a, ft_lstnew(tab[i]));
-		//ft_lstadd_back(&stack_a, ft_char_2_list(argv[2]));
 		i++;
 	}
 	test_list_filling(stack_a);
