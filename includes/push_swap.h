@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/05 21:43:16 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/06 16:28:39 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,13 @@ typedef struct s_list
 
 void	test_list_filling(t_list *list);
 
-//LIBFT
 
-void	ft_lstadd_back(t_list **lst, t_list *new);
+//LIBFT
 size_t		ft_strlen(const char *str);
+int			ft_atoi(const char *str);
+
+//LIST_OPS
+t_list	*ft_lstnew(int tab);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif

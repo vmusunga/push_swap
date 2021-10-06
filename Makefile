@@ -1,9 +1,13 @@
-LIBFT = libft/ft_lstadd_back.c \
-			libft/ft_strlen.c
+LIBFT =		libft/ft_strlen.c \
+			libft/ft_atoi.c
+
+LIST_OPS = list_ops/ft_lstnew.c \
+			list_ops/ft_lstadd_back.c\
 
 OPERATIONS = operations/ft_sa.c \
 
 SRCS =	$(LIBFT) \
+		$(LIST_OPS) \
 		$(OPERATIONS) \
 		main.c
 
@@ -21,7 +25,7 @@ FLAGS	=		-Wall -Werror -Wextra
 RM		=		rm -f
 
 .c.o:
-			$(CC) $(FLAGS) -I include $< -o $(<:.c=.o)
+			$(CC) $(FLAGS) -c -I include $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
 			$(CC) $(FLAGS) $(OBJS) -o $(EXEC)
