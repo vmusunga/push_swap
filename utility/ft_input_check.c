@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_input_check.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:10:47 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/11 16:41:32 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/10/11 16:05:12 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/10/11 16:16:09 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_error(int *new, int i, char *input)
+int	ft_input_check(char **argv)
 {
 	int x;
+	char *input;
 
+	input = argv[1];
 	x = 0;
-	if (ft_check_doubles(new, i) != 0)
-		return (1);
 	while (input[x])
 	{
 		if (ft_isdigit_extended(input[x]) != 1)
-			return (2);
+			return (1);
 		x++;
 	}
-	if (new[i] >= INT_MAX || new[i] <= INT_MIN)
-		return (3);
 	return (0);
 }

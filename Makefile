@@ -6,6 +6,7 @@ LIBFT =		libft/ft_strlen.c \
 UTILITY =	utility/ft_intlen.c \
 			utility/ft_check_doubles.c \
 			utility/ft_error.c \
+			#utility/ft_input_check.c \
 
 LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstadd_back.c\

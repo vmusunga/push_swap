@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/11 15:51:51 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/11 16:33:21 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_isdigit_extended(int c);
 int	ft_intlen(int *tab);
 int	ft_check_doubles(int *tab, int i);
 int	ft_error(int *tab, int i, char *input);
-int	ft_input_check(char **argv);
+//int	ft_input_check(char **argv);
 
 //LIST_OPS
 t_list	*ft_lstnew(int tab);
