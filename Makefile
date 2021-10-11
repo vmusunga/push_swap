@@ -1,13 +1,19 @@
 LIBFT =		libft/ft_strlen.c \
 			libft/ft_atoi.c \
 			libft/ft_split.c \
+			libft/ft_isdigit.c \
 
-LIST_OPS = list_ops/ft_lstnew.c \
+UTILITY =	utility/ft_intlen.c \
+			utility/ft_check_doubles.c \
+			utility/ft_error.c \
+
+LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstadd_back.c\
 
 OPERATIONS = operations/ft_sa.c \
 
 SRCS =	$(LIBFT) \
+		$(UTILITY) \
 		$(LIST_OPS) \
 		$(OPERATIONS) \
 		main.c
