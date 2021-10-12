@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_input_check.c                                   :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 16:05:12 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/11 16:16:09 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/10/12 12:28:20 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/10/12 12:28:39 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_input_check(char **argv)
+char	**ft_free(char **tab, int x)
 {
-	int x;
-	char *input;
+	int i;
 
-	input = argv[1];
-	x = 0;
-	while (input[x])
+	i = 0;
+	while (i < x && tab[i] != '\0')
 	{
-		if (ft_isdigit_extended(input[x]) != 1)
-			return (1);
-		x++;
+		free(tab[i]);
+		i++;
 	}
-	return (0);
+	free(tab);
+	return (NULL);
 }

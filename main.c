@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/11 16:42:26 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/12 12:35:27 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 void	test_list_filling(t_list *list)
 {
-	while (list != 0)
+	while (list)
 	{
 		printf("%d\n", list->content);
 		list = list->next;
 	}
 	return ;
 }
+
+// splits the input in char **tab
+// atois it into int *tab
+// frees char **tab
 
 int	*char_to_int_convert(char *input)
 {
@@ -43,7 +47,7 @@ int	*char_to_int_convert(char *input)
 		i++;
 	}
 	new[i] = 0;
-	free(tab_char);
+	ft_free(tab_char, len);
 	return (new);
 }
 
@@ -58,6 +62,7 @@ int	*single_argv(char **argv)
 	tab = char_to_int_convert(input);
 	if (!tab)
 		return (NULL);
+	free(input);
 	return (tab);
 }
 
