@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/12 15:18:51 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/12 18:01:02 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,9 @@ int	main(int ac, char **argv)
 		i++;
 	}
 	print_list(stack_a);
-	ft_sa(&stack_a);
+	//ft_sa(&stack_a);
+	//ft_ra(&stack_a);
+	ft_rra(&stack_a);
 	printf("\n");
 	print_list(stack_a);
 	return (0);

@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 16:22:58 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/12 17:39:23 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/10/12 18:32:26 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/10/12 18:32:46 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_list	*ft_lstnew(int tab)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list *new;
-
-	new = malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = tab;
-	new->next = 0;
-	return (new);
+	if (lst == 0 || new == 0)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

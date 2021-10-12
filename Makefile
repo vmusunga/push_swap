@@ -11,8 +11,12 @@ UTILITY =	utility/ft_intlen.c \
 
 LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstadd_back.c\
+			list_ops/ft_lstadd_front.c\
+			list_ops/ft_lstlast.c\
 
 OPERATIONS = operations/ft_sa.c \
+			operations/ft_ra.c \
+			operations/ft_rra.c \
 
 SRCS =	$(LIBFT) \
 		$(UTILITY) \

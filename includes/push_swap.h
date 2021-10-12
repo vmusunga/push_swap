@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/12 14:56:06 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/12 18:44:26 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,12 @@ char	**ft_free(char **tab, int x);
 //LIST_OPS
 t_list	*ft_lstnew(int tab);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_sa(t_list **lst);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+t_list	*ft_lstlast(t_list *lst);
+
+void	ft_sa(t_list **stack_a);
+void	ft_ra(t_list **stack_a);
+void	ft_rra(t_list **stack_a);
+
 
 #endif

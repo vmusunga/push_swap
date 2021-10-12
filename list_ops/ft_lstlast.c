@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 16:22:58 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/12 17:39:23 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/15 11:23:08 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/10/12 18:44:15 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_list	*ft_lstnew(int tab)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *new;
-
-	new = malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = tab;
-	new->next = 0;
-	return (new);
+	if (lst == 0)
+		return (0);
+	while (lst->next != 0)
+		lst = lst->next;
+	return (lst);
 }
