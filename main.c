@@ -6,13 +6,13 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/12 12:35:27 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/12 15:18:51 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-void	test_list_filling(t_list *list)
+void	print_list(t_list *list)
 {
 	while (list)
 	{
@@ -62,7 +62,7 @@ int	*single_argv(char **argv)
 	tab = char_to_int_convert(input);
 	if (!tab)
 		return (NULL);
-	free(input);
+	//free(input);
 	return (tab);
 }
 
@@ -91,6 +91,9 @@ int	main(int ac, char **argv)
 		ft_lstadd_back(&stack_a, ft_lstnew(tab[i]));
 		i++;
 	}
-	test_list_filling(stack_a);
+	print_list(stack_a);
+	ft_sa(&stack_a);
+	printf("\n");
+	print_list(stack_a);
 	return (0);
 }

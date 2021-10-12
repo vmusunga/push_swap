@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sa.c                                            :+:      :+:    :+:   */
+/*   ft_ra.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 16:15:34 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/12 15:25:24 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/10/12 15:34:23 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/10/12 15:35:12 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_sa(t_list **stack_a)
+void	ft_ra(t_list **stack_a)
 {
-	t_list *first;
-	t_list *second;
-	t_list *third;
 	
-	if ((!stack_a) || (!*stack_a) || (*stack_a)->next == 0)
-		return ;
-	
-	// base
-	first = *stack_a;
-	second = first->next;
-	third = second->next;
-
-	// switch
-	*stack_a = second;
-	second->next = first;
-	second->previous = 0;
-
-	// base 2
-	first->next = third;
-	first->previous = second;
-	return ;
 }
