@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:10:47 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/12 12:20:17 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/13 13:45:30 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_error(int *new, int i, char *input)
 		if (input[x] == '-' && (ft_isdigit(input[x+1]) != 1))
 			return(4);
 		// lone zero (needed?)
-		if (input[x] == '0' && (ft_isdigit(input[x+1]) != 1))
+		if (input[x] == '0' && (ft_isdigit(input[x-1]) != 1))
 			return(5);
 		x++;
 	}
