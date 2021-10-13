@@ -8,11 +8,11 @@ UTILITY =	utility/ft_intlen.c \
 			utility/ft_error.c \
 			utility/ft_free.c \
 
-
 LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstadd_back.c\
 			list_ops/ft_lstadd_front.c\
 			list_ops/ft_lstlast.c\
+			list_ops/ft_lstclear.c \
 
 OPERATIONS = operations/ft_sa.c \
 			operations/ft_ra.c \

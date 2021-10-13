@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/12 18:01:02 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/13 16:42:19 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,19 @@
 
 void	print_list(t_list *list)
 {
+	int n;
+	
+	n = 0;
 	while (list)
 	{
-		printf("%d\n", list->content);
+		n = list->content;
+		printf("%d", list->content);
+		while (n > 0)
+		{
+			printf("%c", '-');
+			n--;
+		}
+		printf("\n");
 		list = list->next;
 	}
 	return ;
@@ -82,7 +92,7 @@ int	main(int ac, char **argv)
 	if (!tab)
 	{
 		printf("Error\n");
-		return(0);
+		exit(EXIT_FAILURE);
 	}
 	len = ft_intlen(tab);
 	i = 0;
@@ -94,8 +104,10 @@ int	main(int ac, char **argv)
 	print_list(stack_a);
 	//ft_sa(&stack_a);
 	//ft_ra(&stack_a);
-	ft_rra(&stack_a);
 	printf("\n");
+	ft_rra(&stack_a);
 	print_list(stack_a);
+	free(tab);
+	ft_lstclear(&stack_a);
 	return (0);
 }
