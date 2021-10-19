@@ -7,6 +7,8 @@ UTILITY =	utility/ft_intlen.c \
 			utility/ft_check_doubles.c \
 			utility/ft_error.c \
 			utility/ft_free.c \
+			utility/ft_tabtab_to_tab.c \
+			utility/ft_count_double_tab.c \
 
 LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstadd_back.c\

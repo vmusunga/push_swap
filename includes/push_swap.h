@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/13 16:37:06 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/19 19:21:45 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ int	ft_intlen(int *tab);
 int	ft_check_doubles(int *tab, int i);
 int	ft_error(int *tab, int i, char *input);
 char	**ft_free(char **tab, int x);
+char	*ft_tabtab_to_tab(char **tab);
+int	ft_count_double_tab(char **tab);
+
 
 //LIST_OPS
 t_list	*ft_lstnew(int tab);
