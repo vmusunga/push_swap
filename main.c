@@ -6,13 +6,13 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/19 19:23:27 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/25 13:39:26 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-void	print_list(t_list *list)
+/*void	print_list(t_list *list)
 {
 	int n;
 	
@@ -28,6 +28,27 @@ void	print_list(t_list *list)
 		}
 		printf("\n");
 		list = list->next;
+	}
+	return ;
+}*/
+
+void	print_list(t_list *stack_a, t_list *stack_b)
+{
+	int n;
+	
+	n = 0;
+	printf("a b\n");
+	while (stack_a || stack_b)
+	{
+		if (stack_a)
+			printf("%d ", stack_a->content);
+		if (stack_b)
+			printf("%d", stack_b->content);
+		printf("\n");
+		if (stack_a)
+			stack_a = stack_a->next;
+		if (stack_b)
+			stack_b = stack_b->next;
 	}
 	return ;
 }
@@ -72,7 +93,6 @@ int	*single_argv(char **argv)
 	tab = char_to_int(input);
 	if (!tab)
 		return (NULL);
-	//free(input);
 	return (tab);
 }
 
@@ -85,6 +105,7 @@ int *multi_argv(char **argv)
 	tab = char_to_int(input);
 	if (!tab)
 		return (NULL);
+	free(input);
 	return (tab);
 }
 
@@ -94,9 +115,11 @@ int	main(int ac, char **argv)
 	int len;
 	int *tab;
 	t_list *stack_a;
+	t_list *stack_b;
 
 	tab = 0;
 	stack_a = 0;				//malloc?
+	stack_b = 0;				//malloc?
 	if (ac == 2)
 		tab = single_argv(argv);
 	if (ac > 2)
@@ -113,12 +136,15 @@ int	main(int ac, char **argv)
 		ft_lstadd_back(&stack_a, ft_lstnew(tab[i]));
 		i++;
 	}
-	print_list(stack_a);
+	print_list(stack_a, stack_b);
 	//ft_sa(&stack_a);
 	//ft_ra(&stack_a);
 	printf("\n");
+	ft_pb(&stack_a, &stack_b);
+	ft_pb(&stack_a, &stack_b);
+	//ft_pb(&stack_a, &stack_b);
 	//ft_rra(&stack_a);
-	//print_list(stack_a);
+	print_list(stack_a, stack_b);
 	free(tab);
 	ft_lstclear(&stack_a);
 	return (0);

@@ -19,6 +19,7 @@ LIST_OPS =	list_ops/ft_lstnew.c \
 OPERATIONS = operations/ft_sa.c \
 			operations/ft_ra.c \
 			operations/ft_rra.c \
+			operations/ft_pb.c \
 
 SRCS =	$(LIBFT) \
 		$(UTILITY) \

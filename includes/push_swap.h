@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/19 19:21:45 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/25 13:02:42 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_list
 	struct s_list	*previous;
 }				t_list;
 
-void	print_list(t_list *list);
+void	print_list(t_list *list1, t_list *list2);
 
 
 //LIBFT
@@ -55,5 +55,6 @@ void	ft_lstclear(t_list **lst);
 void	ft_sa(t_list **stack_a);
 void	ft_ra(t_list **stack_a);
 void	ft_rra(t_list **stack_a);
+void	ft_pb(t_list **stack_a, t_list **stack_b);
 
 #endif

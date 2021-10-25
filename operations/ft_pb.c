@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ra.c                                            :+:      :+:    :+:   */
+/*   ft_pb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 15:34:23 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/25 12:39:32 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/10/25 12:32:49 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/10/25 13:44:33 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_ra(t_list **stack_a)
+void	ft_pb(t_list **stack_a, t_list **stack_b)
 {
 	t_list *first;
-
-	if ((!stack_a) || (!*stack_a) || (*stack_a)->next == 0)
+	
+	if ((!stack_a) || (!*stack_a))
 		return ;
-
 	first = *stack_a;
 	*stack_a = (*stack_a)->next;
-	ft_lstadd_back(stack_a, first);
+	if (!stack_b)
+	{
+		first->next = 0;
+		*stack_b = first;
+	}
+	else
+	{
+		first->next = *stack_b;
+		*stack_b = first;
+	}
+	//first->next = *stack_b;
+	//ft_lstadd_front(stack_b, first);
+	free(first);
+	return ;
 }
