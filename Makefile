@@ -2,6 +2,7 @@ LIBFT =		libft/ft_strlen.c \
 			libft/ft_atoi.c \
 			libft/ft_split.c \
 			libft/ft_isdigit.c \
+			libft/ft_putendl_fd.c \
 
 UTILITY =	utility/ft_intlen.c \
 			utility/ft_check_doubles.c \
@@ -16,12 +17,13 @@ LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstlast.c\
 			list_ops/ft_lstclear.c \
 
-OPERATIONS = operations/ft_sa.c \
+OPERATIONS =operations/ft_sa.c \
 			operations/ft_ra.c \
 			operations/ft_rra.c \
 			operations/ft_pb.c \
 
-ALGO = algorithms/ft_short_list.c \
+ALGO =	algorithms/ft_redirect.c \
+		algorithms/ft_short_list.c \
 
 SRCS =	$(ALGO) \
 		$(LIBFT) \

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/26 14:52:45 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/26 17:29:42 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdio.h>
 # include <limits.h>
 # include <stdlib.h>
+
+#define STDOUT 1
 
 typedef struct s_list
 {
@@ -34,6 +36,7 @@ int			ft_atoi(const char *str);
 char		**ft_split(char const *s, char c);
 int	ft_isdigit_extended(int c);
 int	ft_isdigit(int c);
+void	ft_putendl_fd(char *s, int fd);
 
 //UTILITY
 int	ft_intlen(int *tab);
@@ -52,12 +55,13 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstclear(t_list **lst);
 
 //OPERATIONS
-void	ft_sa(t_list **stack_a);
-void	ft_ra(t_list **stack_a);
-void	ft_rra(t_list **stack_a);
-void	ft_pb(t_list **stack_a, t_list **stack_b);
+int	ft_sa(t_list **stack_a, int write_out);
+int	ft_ra(t_list **stack_a, int write_out);
+int	ft_rra(t_list **stack_a, int write_out);
+int	ft_pb(t_list **stack_a, t_list **stack_b, int write_out);
 
 //ALGO
+void	ft_redirect(t_list **stack_a, t_list **stack_b, int len);
 void	ft_short_list(t_list **lst);
 
 #endif
