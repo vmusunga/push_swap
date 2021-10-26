@@ -6,13 +6,13 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/25 15:05:41 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/26 12:59:37 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-/*void	print_list(t_list *list)
+/*void	print_list_test(t_list *list)
 {
 	int n;
 	
@@ -42,8 +42,10 @@ void	print_list(t_list *stack_a, t_list *stack_b)
 	{
 		if (stack_a)
 			printf("%d ", stack_a->content);
-		if (stack_b)
+		if (stack_b && stack_a)
 			printf("%d", stack_b->content);
+		if (stack_b && !stack_a)
+			printf("  %d", stack_b->content);
 		printf("\n");
 		if (stack_a)
 			stack_a = stack_a->next;
@@ -142,10 +144,11 @@ int	main(int ac, char **argv)
 	printf("\n");
 	//ft_rra(&stack_a);
 	ft_pb(&stack_a, &stack_b);
+	//printf("\n");
 	ft_pb(&stack_a, &stack_b);
 
-
 	print_list(stack_a, stack_b);
+	
 	free(tab);
 	ft_lstclear(&stack_a);
 	return (0);
