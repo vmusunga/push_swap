@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/26 12:59:37 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/26 15:26:58 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,13 +143,14 @@ int	main(int ac, char **argv)
 	//ft_ra(&stack_a);
 	printf("\n");
 	//ft_rra(&stack_a);
-	ft_pb(&stack_a, &stack_b);
-	//printf("\n");
-	ft_pb(&stack_a, &stack_b);
+	//ft_pb(&stack_a, &stack_b);
+	if (len < 4)
+		ft_short_list(&stack_a);
 
 	print_list(stack_a, stack_b);
-	
+
 	free(tab);
 	ft_lstclear(&stack_a);
+	ft_lstclear(&stack_b);
 	return (0);
 }

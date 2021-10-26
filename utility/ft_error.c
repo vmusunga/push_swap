@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:10:47 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/13 16:43:50 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/26 15:31:08 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_error(int *new, int i, char *input)			// !!LEAKS!! //
 		if (ft_isdigit_extended(input[x]) != 1)
 			return (2);
 		// checking minus in between
-		if (input[x] == '-' && input[x-1] != ' ')
+		if (input[x] == '-' && ft_isdigit(input[x-1]) == 1)
 			return (3);
 		// checking minus at the end
 		if (input[x] == '-' && (ft_isdigit(input[x+1]) != 1))

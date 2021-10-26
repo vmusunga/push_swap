@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/25 13:02:42 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/26 14:52:45 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,8 @@ void	ft_sa(t_list **stack_a);
 void	ft_ra(t_list **stack_a);
 void	ft_rra(t_list **stack_a);
 void	ft_pb(t_list **stack_a, t_list **stack_b);
+
+//ALGO
+void	ft_short_list(t_list **lst);
 
 #endif

@@ -21,7 +21,10 @@ OPERATIONS = operations/ft_sa.c \
 			operations/ft_rra.c \
 			operations/ft_pb.c \
 
-SRCS =	$(LIBFT) \
+ALGO = algorithms/ft_short_list.c \
+
+SRCS =	$(ALGO) \
+		$(LIBFT) \
 		$(UTILITY) \
 		$(LIST_OPS) \
 		$(OPERATIONS) \
