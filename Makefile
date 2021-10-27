@@ -18,9 +18,13 @@ LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstclear.c \
 
 OPERATIONS =operations/ft_sa.c \
+			operations/ft_sb.c \
 			operations/ft_ra.c \
+			operations/ft_rb.c \
 			operations/ft_rra.c \
+			operations/ft_rrb.c \
 			operations/ft_pb.c \
+			operations/ft_pa.c \
 
 ALGO =	algorithms/ft_redirect.c \
 		algorithms/ft_short_list.c \

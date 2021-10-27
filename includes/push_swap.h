@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/26 17:29:42 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/27 16:40:51 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,13 @@ void	ft_lstclear(t_list **lst);
 
 //OPERATIONS
 int	ft_sa(t_list **stack_a, int write_out);
+int	ft_sb(t_list **stack_b, int write_out);
 int	ft_ra(t_list **stack_a, int write_out);
+int	ft_rb(t_list **stack_b, int write_out);
 int	ft_rra(t_list **stack_a, int write_out);
+int	ft_rrb(t_list **stack_b, int write_out);
 int	ft_pb(t_list **stack_a, t_list **stack_b, int write_out);
+int	ft_pa(t_list **stack_a, t_list **stack_b, int write_out);
 
 //ALGO
 void	ft_redirect(t_list **stack_a, t_list **stack_b, int len);

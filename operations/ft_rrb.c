@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_redirect.c                                      :+:      :+:    :+:   */
+/*   ft_rrb.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 15:35:28 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/27 16:43:10 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/10/12 17:39:01 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/10/27 13:00:22 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_redirect(t_list **stack_a, t_list **stack_b, int len)
+int	ft_rrb(t_list **stack_b, int write_out)
 {
-	if (stack_b)
-	if (len < 4)
-		ft_short_list(stack_a);
-	//if (len < 5)
-	printf("\n");
-	
-	print_list(*stack_a, *stack_b);
-	
-	return ;
+	t_list *last;
+	t_list *Olast;
+
+	if ((!stack_b) || (!*stack_b) || (*stack_b)->next == 0)
+		return (0);
+	last = *stack_b;
+	Olast = last->previous;
+	while (last->next)
+	{
+		Olast = last;
+		last = last->next;
+	}
+	Olast->next = 0;
+	last->next = *stack_b;
+	*stack_b = last;
+	if (write_out)
+		ft_putendl_fd("rrb", STDOUT);
+	return (1);
 }
