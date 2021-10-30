@@ -25,9 +25,13 @@ OPERATIONS =operations/ft_sa.c \
 			operations/ft_rrb.c \
 			operations/ft_pb.c \
 			operations/ft_pa.c \
+			operations/ft_ss.c \
+			operations/ft_rr.c \
+			operations/ft_rrr.c \
 
 ALGO =	algorithms/ft_redirect.c \
-		algorithms/ft_short_list.c \
+		algorithms/ft_three_elem_sort.c \
+		algorithms/ft_five_elem_sort.c \
 
 SRCS =	$(ALGO) \
 		$(LIBFT) \

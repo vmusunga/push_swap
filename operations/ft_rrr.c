@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sa.c                                            :+:      :+:    :+:   */
+/*   ft_rrr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 16:15:34 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/30 17:37:24 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/10/30 17:34:36 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/10/30 17:43:47 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_sa(t_list **stack_a, int write_out)
+int	ft_rrr(t_list **stack_a, t_list **stack_b, int fd)
 {
-	t_list *first;
-	t_list *second;
-	t_list *third;
-	
-	if ((!stack_a) || (!*stack_a) || (*stack_a)->next == 0)
+	if (!*stack_a || !stack_a || !stack_b || !*stack_b)
 		return (0);
-	
-	// base
-	first = *stack_a;
-	second = first->next;
-	third = second->next;
-
-	// switch
-	*stack_a = second;
-	second->next = first;
-	second->previous = 0;
-
-	// base 2
-	first->next = third;
-	first->previous = second;
-	if (write_out)
-		ft_putendl_fd("sa", STDOUT);
+	ft_rra(stack_a, 0);
+	ft_rrb(stack_b, 0);
+	if (fd)
+		ft_putendl_fd("rrr", STDOUT);
 	return (1);
 }

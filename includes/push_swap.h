@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/27 16:40:51 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/30 18:57:16 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,13 @@ int	ft_rra(t_list **stack_a, int write_out);
 int	ft_rrb(t_list **stack_b, int write_out);
 int	ft_pb(t_list **stack_a, t_list **stack_b, int write_out);
 int	ft_pa(t_list **stack_a, t_list **stack_b, int write_out);
+int	ft_rr(t_list **stack_a, t_list **stack_b, int fd);
+int	ft_rrr(t_list **stack_a, t_list **stack_b, int fd);
+int	ft_ss(t_list **stack_a, t_list **stack_b, int fd);
 
 //ALGO
 void	ft_redirect(t_list **stack_a, t_list **stack_b, int len);
-void	ft_short_list(t_list **lst);
+void	ft_three_elem_sort(t_list **lst);
+void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len);
 
 #endif
