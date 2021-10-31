@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/30 19:08:23 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/31 02:20:02 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ int *multi_argv(char **argv)
 	tab = char_to_int(input);
 	if (!tab)
 		return (NULL);
-	free(input);
+	//free(input);
 	return (tab);
 }
 
@@ -142,8 +142,7 @@ int	main(int ac, char **argv)
 	
 	print_list(stack_a, stack_b);
 	printf("\n");
-	ft_redirect(&stack_a, &stack_b, len);
-	//print_list(stack_a, stack_b);
+	ft_redirect(&stack_a, &stack_b);
 
 	free(tab);
 	ft_lstclear(&stack_a);

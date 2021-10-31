@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/30 18:57:16 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/31 02:15:40 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstclear(t_list **lst);
+int	ft_lstsize(t_list *lst);
 
 //OPERATIONS
 int	ft_sa(t_list **stack_a, int write_out);
@@ -68,7 +69,8 @@ int	ft_rrr(t_list **stack_a, t_list **stack_b, int fd);
 int	ft_ss(t_list **stack_a, t_list **stack_b, int fd);
 
 //ALGO
-void	ft_redirect(t_list **stack_a, t_list **stack_b, int len);
+void	ft_redirect(t_list **stack_a, t_list **stack_b);
+void	ft_two_elem_sort(t_list **stack_a);
 void	ft_three_elem_sort(t_list **lst);
 void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len);
 

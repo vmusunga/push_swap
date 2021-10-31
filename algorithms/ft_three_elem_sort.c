@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:47:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/30 19:03:16 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/31 02:15:00 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	ft_three_elem_sort(t_list **lst)
 	sec = (*lst)->next->content;
 	third = (*lst)->next->next->content;
 	
+	if (!lst || !*lst)
+		return ;
 	if (first > sec && first > third && sec > third)
 	{
 		ft_sa(lst, 1);

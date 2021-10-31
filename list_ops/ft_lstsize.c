@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_double_tab.c                              :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 19:20:14 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/31 02:31:32 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/15 11:17:08 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/10/31 02:19:04 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_count_double_tab(char **tab)
+int	ft_lstsize(t_list *lst)
 {
-	int len;
-	int x;
-	int y;
-	
-	x = 1;			//starts at argv[1]
-	len = 0;
-	while (tab[x])
+	int i;
+
+	i = 0;
+	while (lst != 0)
 	{
-		y = 0;
-		while (tab[x][y])
-		{
-			y++;
-			len++;
-		}
-	x++;
+		lst = lst->next;
+		i++;
 	}
-	return (len);
+	return (i);
 }

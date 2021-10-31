@@ -6,20 +6,24 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:35:28 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/30 19:07:31 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/10/31 02:17:25 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_redirect(t_list **stack_a, t_list **stack_b, int len)
+void	ft_redirect(t_list **stack_a, t_list **stack_b)
 {
+	int len;
+	
+	len = ft_lstsize(*stack_a);
+	printf("%d\n", len);
 	if (stack_b)
 	if (len == 2)
-		ft_sa(stack_a, 1);
+		ft_two_elem_sort(stack_a);
 	if (len == 3)
 		ft_three_elem_sort(stack_a);
-	if (len == 5)
+	if (len > 3 && len <= 5)
 		ft_five_elem_sort(stack_a, stack_b, len);
 	//ft_pb(stack_a, stack_b, 1);
 	
