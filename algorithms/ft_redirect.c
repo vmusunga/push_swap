@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:35:28 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/31 02:17:25 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/05 18:47:18 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_redirect(t_list **stack_a, t_list **stack_b)
 	int len;
 	
 	len = ft_lstsize(*stack_a);
-	printf("%d\n", len);
+	//printf("%d\n", len);
 	if (stack_b)
 	if (len == 2)
 		ft_two_elem_sort(stack_a);
