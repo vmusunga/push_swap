@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/05 18:45:48 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/06 12:13:30 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	*char_to_int(char *input)
 		i++;
 	}
 	new[i] = 0;
-	ft_free(tab_char, len);
+	//ft_free(tab_char, len);
 	return (new);
 }
 
@@ -140,8 +140,8 @@ int	main(int ac, char **argv)
 		i++;
 	}
 	
-	//print_list(stack_a, stack_b);
-	//printf("\n");
+	print_list(stack_a, stack_b);
+	printf("\n");
 	ft_redirect(&stack_a, &stack_b);
 
 	free(tab);

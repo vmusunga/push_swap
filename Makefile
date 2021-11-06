@@ -17,6 +17,7 @@ LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstlast.c\
 			list_ops/ft_lstclear.c \
 			list_ops/ft_lstsize.c \
+			list_ops/ft_lstmin.c \
 
 OPERATIONS =operations/ft_sa.c \
 			operations/ft_sb.c \
@@ -34,6 +35,7 @@ ALGO =	algorithms/ft_redirect.c \
 		algorithms/ft_three_elem_sort.c \
 		algorithms/ft_two_elem_sort.c \
 		algorithms/ft_five_elem_sort.c \
+		algorithms/ft_output_check.c \
 
 SRCS =	$(ALGO) \
 		$(LIBFT) \

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:35:28 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/05 18:47:18 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/06 13:27:51 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ft_redirect(t_list **stack_a, t_list **stack_b)
 	//ft_pb(stack_a, stack_b, 1);
 	
 	print_list(*stack_a, *stack_b);
+	ft_output_check(stack_a);
 	
 	//ft_ss(stack_a, stack_b, 1);
 	//ft_rr(stack_a, stack_b, 1);
