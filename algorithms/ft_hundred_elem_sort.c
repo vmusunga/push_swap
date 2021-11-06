@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmin.c                                        :+:      :+:    :+:   */
+/*   ft_hundred_elem_sort.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 13:57:05 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/06 19:51:48 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/11/06 20:20:10 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/11/06 20:22:53 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_lstmin(t_list **stack_a)
+ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 {
-	int min;
-	t_list *current;
+	int len;
 
-	current = (*stack_a);
-	min = current->content;
-	current = (*stack_a)->next;
-	while (current)
-	{
-		if (current->content < min)
-			min = current->content;
-		current = current->next;
-	}
-	return (min);
+	len = ft_lstsize(stack_a);
+	
 }
