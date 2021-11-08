@@ -6,21 +6,52 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 17:29:59 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/06 20:18:03 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/08 12:48:28 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_wich_half(t_list **stack_a)
+int	ft_n_ops(t_list **stack_a, int min)
 {
 	int len;
-	int min;
+	int pos;
+	int pos1;
+	int n_ops_up;
+	int n_ops_down;
+	t_list *buff;
+	
+	len = ft_lstsize(*stack_a);
+	buff = *stack_a;
+	pos = 0;
+	while (buff->content != min)
+	{
+		buff = buff->next;
+		pos++;
+	}
+	pos1 = pos;
+	while (pos != 0)
+	{
+		pos--;
+		n_ops_up++;
+	}
+	while (pos1 != len + 1)
+	{
+		pos1++;
+		n_ops_down++;
+	}
+	if (n_ops_up < n_ops_down)
+		return(n_ops_up);
+	return (n_ops_down);
+}
+
+int	ft_wich_half(t_list **stack_a, int min)
+{
+	int len;
 	int pos;
 	t_list *buff;
 	
 	len = ft_lstsize(*stack_a);
-	min = ft_lstmin(stack_a);
 	buff = *stack_a;
 	pos = 0;
 	while (buff->content != min)
@@ -33,8 +64,6 @@ int	ft_wich_half(t_list **stack_a)
 	return (1);
 }
 
-void	ft_min_to_top(t_list **stack_a);
-
 void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len)   // 13steps "75 64 18 73 69"
 {
 	t_list *first;
@@ -46,7 +75,7 @@ void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len)   // 13steps
 	if (len == 5)
 	{
 		min = ft_lstmin(stack_a); //min_to_top
-		if (!ft_wich_half(stack_a))
+		if (!ft_wich_half(stack_a, min))
 		{
 			while ((*stack_a)->content != min)
 				ft_ra(stack_a, 1);
