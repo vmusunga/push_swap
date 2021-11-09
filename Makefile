@@ -35,6 +35,7 @@ ALGO =	algorithms/ft_redirect.c \
 		algorithms/ft_three_elem_sort.c \
 		algorithms/ft_two_elem_sort.c \
 		algorithms/ft_five_elem_sort.c \
+		algorithms/ft_hundred_elem_sort.c \
 		algorithms/ft_output_check.c \
 
 SRCS =	$(ALGO) \

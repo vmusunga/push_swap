@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 17:29:59 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/08 12:48:28 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/09 14:09:59 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int	ft_n_ops(t_list **stack_a, int min)
 {
 	int len;
 	int pos;
-	int pos1;
 	int n_ops_up;
 	int n_ops_down;
 	t_list *buff;
@@ -29,17 +28,8 @@ int	ft_n_ops(t_list **stack_a, int min)
 		buff = buff->next;
 		pos++;
 	}
-	pos1 = pos;
-	while (pos != 0)
-	{
-		pos--;
-		n_ops_up++;
-	}
-	while (pos1 != len + 1)
-	{
-		pos1++;
-		n_ops_down++;
-	}
+	n_ops_down = len - pos;
+	n_ops_up = pos;
 	if (n_ops_up < n_ops_down)
 		return(n_ops_up);
 	return (n_ops_down);

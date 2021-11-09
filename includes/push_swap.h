@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/06 19:51:36 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/09 13:42:46 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	ft_error(int *tab, int i, char *input);
 char	**ft_free(char **tab, int x);
 char	*ft_tabtab_to_tab(char **tab);
 int	ft_count_double_tab(char **tab);
+int	ft_wich_half(t_list **stack_a, int min);
+int	ft_n_ops(t_list **stack_a, int min);
 
 
 //LIST_OPS
@@ -74,6 +76,7 @@ void	ft_redirect(t_list **stack_a, t_list **stack_b);
 void	ft_two_elem_sort(t_list **stack_a);
 void	ft_three_elem_sort(t_list **lst);
 void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len);
+void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b);
 int	ft_output_check(t_list **stack_a);
 
 #endif
