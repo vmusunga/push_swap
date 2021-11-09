@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:35:28 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/09 13:40:28 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/09 22:28:54 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_redirect(t_list **stack_a, t_list **stack_b)
 		ft_three_elem_sort(stack_a);
 	if (len > 3 && len <= 5)
 		ft_five_elem_sort(stack_a, stack_b, len);
-	if (len <= 100)
+	if (len > 5 && len <= 100)
 		ft_hundred_elem_sort(stack_a, stack_b);
 	//ft_pb(stack_a, stack_b, 1);
 	

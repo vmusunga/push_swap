@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 17:29:59 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/09 14:09:59 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/09 21:46:36 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,21 +60,12 @@ void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len)   // 13steps
 	t_list *last;
 	int min;
 
+	min = ft_lstmin(stack_a);
 	if (len == 4)
 		ft_pb(stack_a, stack_b, 1);
 	if (len == 5)
 	{
-		min = ft_lstmin(stack_a); //min_to_top
-		if (!ft_wich_half(stack_a, min))
-		{
-			while ((*stack_a)->content != min)
-				ft_ra(stack_a, 1);
-		}
-		else
-		{
-			while ((*stack_a)->content != min)
-				ft_rra(stack_a, 1);
-		}
+		ft_min_to_top(stack_a, min);
 		ft_pb(stack_a, stack_b, 1);
 		ft_pb(stack_a, stack_b, 1);
 		ft_two_elem_sort(stack_b);

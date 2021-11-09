@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmin.c                                        :+:      :+:    :+:   */
+/*   ft_min_to_top.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 13:57:05 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/09 22:33:27 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/11/09 21:37:13 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/11/09 21:44:36 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_lstmin(t_list **stack)
+void	ft_min_to_top(t_list **stack, int min)
 {
-	int min;
-	t_list *current;
-	if (!stack || !*stack)
-		return (0);
-
-	current = (*stack);
-	min = current->content;
-	current = (*stack)->next;
-	while (current)
+	if (!ft_wich_half(stack, min))
 	{
-		if (current->content < min)
-			min = current->content;
-		current = current->next;
+		while ((*stack)->content != min)
+			ft_ra(stack, 1);
 	}
-	return (min);
+	else
+	{
+		while ((*stack)->content != min)
+			ft_rra(stack, 1);
+	}
+	return ;
 }
