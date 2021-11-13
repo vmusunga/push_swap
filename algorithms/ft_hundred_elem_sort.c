@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:20:10 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/09 23:21:18 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/13 13:10:14 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,20 +43,23 @@ void	ft_wich_min(t_list **stack_a)
 	return ;
 }
 
-int	ft_greater_than( t_list **stack, int min)     //in progress
+int	ft_greater_than( t_list **stack, int nb)     //in progress
 {
 	t_list *current;
 	int x;
+	int test;
+	
 	if (!stack || !*stack)
 		return (0);
 
 	current = (*stack);
-	x = min;
+	test = 0;
+	x = nb;
 	while (current)
 	{
-		if (current->content > min)
+		if (nb > current->content)
 			x = current->content;
-		if (min < current->content && current->content < x)
+		if (nb > current->content && current->content > x)
 			x = current->content;
 		current = current->next;
 	}
@@ -81,6 +84,7 @@ void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 			//else
 				//ft_min_to_top(stack_b, ft_greater_than(stack_b, (*stack_a)->content));   //ensure the right min is on top before pushing
 		}
+		printf("\n%d\n", ft_greater_than(stack_b, (*stack_a)->content));
 		ft_pb(stack_a, stack_b, 1);
 		chunk--;
 		print_list(*stack_a, *stack_b);
