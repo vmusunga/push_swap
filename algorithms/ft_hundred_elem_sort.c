@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:20:10 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/29 14:44:04 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/29 16:28:06 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,12 +79,12 @@ void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 		ft_wich_min(stack_a);   //sends correct min to top of A
 		if (*stack_b)
 		{
-			if ((*stack_a)->content < ft_lstmin(stack_b))
-				ft_min_to_top(stack_b, ft_lstmin(stack_b));   //ensure the right min is on top before pushing
 			if (ft_lstsize(*stack_b) > 2)
 				ft_min_to_top_b(stack_b, ft_greater_than(*stack_b, (*stack_a)->content));   //ensure the right min is on top before pushing
+			if ((*stack_a)->content < ft_lstmin(stack_b))
+				ft_min_to_top(stack_b, ft_lstmin(stack_b));   //ensure the right min is on top before pushing
 		}
-		printf("\n%d\n", ft_greater_than(*stack_b, (*stack_a)->content));
+		//printf("\n%d\n", ft_greater_than(*stack_b, (*stack_a)->content));
 		print_list(*stack_a, *stack_b);
 		//while (ft_greater_than(*stack_b, (*stack_a)->content) != (*stack_b)->content)
 			//ft_rb(stack_b, 1);
