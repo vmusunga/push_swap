@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:20:10 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/13 13:10:14 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/29 14:44:04 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ft_sec_min(t_list **stack_a, int min1)
 			min2 = current->content;
 		current = current->next;
 	}
+	free(current);
 	return (min2);
 }
 
@@ -43,26 +44,25 @@ void	ft_wich_min(t_list **stack_a)
 	return ;
 }
 
-int	ft_greater_than( t_list **stack, int nb)     //in progress
+int	ft_greater_than(t_list *stack, int top_nb)     //in progress
 {
 	t_list *current;
 	int x;
-	int test;
-	
-	if (!stack || !*stack)
+
+	if (!stack)
 		return (0);
 
-	current = (*stack);
-	test = 0;
-	x = nb;
+	current = stack;
+	x = 0;
 	while (current)
 	{
-		if (nb > current->content)
+		if (top_nb > current->content)
 			x = current->content;
-		if (nb > current->content && current->content > x)
+		if (top_nb > current->content && current->content > x)
 			x = current->content;
 		current = current->next;
 	}
+	free(current);
 	return (x);
 }
 
@@ -81,13 +81,15 @@ void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 		{
 			if ((*stack_a)->content < ft_lstmin(stack_b))
 				ft_min_to_top(stack_b, ft_lstmin(stack_b));   //ensure the right min is on top before pushing
-			//else
-				//ft_min_to_top(stack_b, ft_greater_than(stack_b, (*stack_a)->content));   //ensure the right min is on top before pushing
+			if (ft_lstsize(*stack_b) > 2)
+				ft_min_to_top_b(stack_b, ft_greater_than(*stack_b, (*stack_a)->content));   //ensure the right min is on top before pushing
 		}
-		printf("\n%d\n", ft_greater_than(stack_b, (*stack_a)->content));
+		printf("\n%d\n", ft_greater_than(*stack_b, (*stack_a)->content));
+		print_list(*stack_a, *stack_b);
+		//while (ft_greater_than(*stack_b, (*stack_a)->content) != (*stack_b)->content)
+			//ft_rb(stack_b, 1);
 		ft_pb(stack_a, stack_b, 1);
 		chunk--;
-		print_list(*stack_a, *stack_b);
 	}
 	return ;
 }

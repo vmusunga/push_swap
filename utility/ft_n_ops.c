@@ -1,43 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min_to_top.c                                    :+:      :+:    :+:   */
+/*   ft_n_ops.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 21:37:13 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/29 14:32:02 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/10/30 17:29:59 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/11/29 13:45:27 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_min_to_top(t_list **stack, int min)
+int	ft_n_ops(t_list **stack_a, int min)
 {
-	if (!ft_wich_half(stack, min))
+	int len;
+	int pos;
+	int n_ops_up;
+	int n_ops_down;
+	t_list *buff;
+	
+	len = ft_lstsize(*stack_a);
+	buff = *stack_a;
+	pos = 0;
+	while (buff->content != min)
 	{
-		while ((*stack)->content != min)
-			ft_ra(stack, 1);
+		buff = buff->next;
+		pos++;
 	}
-	else
-	{
-		while ((*stack)->content != min)
-			ft_rra(stack, 1);
-	}
-	return ;
-}
-
-void	ft_min_to_top_b(t_list **stack, int min)
-{
-	if (!ft_wich_half(stack, min))
-	{
-		while ((*stack)->content != min)
-			ft_rb(stack, 1);
-	}
-	else
-	{
-		while ((*stack)->content != min)
-			ft_rrb(stack, 1);
-	}
-	return ;
+	n_ops_down = len - pos;
+	n_ops_up = pos;
+	//free(buff);
+	if (n_ops_up < n_ops_down)
+		return(n_ops_up);
+	return (n_ops_down);
 }

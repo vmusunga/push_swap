@@ -11,6 +11,7 @@ UTILITY =	utility/ft_intlen.c \
 			utility/ft_tabtab_to_tab.c \
 			utility/ft_count_double_tab.c \
 			utility/ft_min_to_top.c \
+			utility/ft_n_ops.c \
 
 LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstadd_back.c\
