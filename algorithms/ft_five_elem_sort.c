@@ -6,20 +6,20 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 17:29:59 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/29 16:13:40 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:09:22 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_wich_half(t_list **stack_a, int min)
+int	ft_wich_half(t_list **stack, int min)
 {
 	int len;
 	int pos;
 	t_list *buff;
 	
-	len = ft_lstsize(*stack_a);
-	buff = *stack_a;
+	len = ft_lstsize(*stack);
+	buff = *stack;
 	pos = 0;
 	while (buff->content != min)
 	{

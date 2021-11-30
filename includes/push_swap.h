@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/29 14:32:50 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:09:29 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_error(int *tab, int i, char *input);
 char	**ft_free(char **tab, int x);
 char	*ft_tabtab_to_tab(char **tab);
 int	ft_count_double_tab(char **tab);
-int	ft_wich_half(t_list **stack_a, int min);
+int	ft_wich_half(t_list **stack, int min);
 int	ft_n_ops(t_list **stack_a, int min);
 void	ft_min_to_top(t_list **stack, int min);
 void	ft_min_to_top_b(t_list **stack, int min);
