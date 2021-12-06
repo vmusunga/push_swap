@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/30 17:09:29 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/12/06 15:15:40 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstclear(t_list **lst);
 int	ft_lstsize(t_list *lst);
 int ft_lstmin(t_list **stack);
+int ft_lstmax(t_list **stack);
 
 //OPERATIONS
 int	ft_sa(t_list **stack_a, int write_out);

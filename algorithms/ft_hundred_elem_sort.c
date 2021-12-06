@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:20:10 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/30 18:48:52 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/12/06 15:30:46 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_greater_than(t_list *stack, int top_nb)     //in progress
 	x = current->content;
 	while (current)
 	{
-		if (top_nb > current->content && current->content > x)
+		if (top_nb < current->content && current->content < x)
 			x = current->content;
 		current = current->next;
 	}
@@ -80,13 +80,15 @@ void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)         //pushing 
 		{
 			if ((*stack_a)->content < ft_lstmin(stack_b))
 				ft_min_to_top(stack_b, ft_lstmin(stack_b));   //ensure the right min is on top before pushing
+			if ((*stack_a)->content > ft_lstmin(stack_b) && (*stack_a)->content < ft_lstmax(stack_b))
+				ft_min_to_top_b(stack_b, ft_greater_than(*stack_b, (*stack_a)->content));   //if between min & max, find right one (progress)
 		}
 		print_list(*stack_a, *stack_b);
 		ft_pb(stack_a, stack_b, 1);
-		if ((*stack_b)->content < ft_lstmin(stack_b))   //rotate last added unless its a new min
+		if ((*stack_b)->content > ft_lstmin(stack_b))   //rotate last added unless its a new min
 			ft_rb(stack_b, 1);
-		if (ft_lstsize(*stack_b) >= 3 && (*stack_b)->content < (*stack_b)->next->content)   //checks 2first if switch needed
-			ft_sb(stack_b, 1);
+		//if (ft_lstsize(*stack_b) >= 3 && (*stack_b)->content < (*stack_b)->next->content)   //checks 2first if switch needed
+		//	ft_sb(stack_b, 1);
 		chunk--;
 	}
 	return ;

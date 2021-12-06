@@ -20,6 +20,7 @@ LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstclear.c \
 			list_ops/ft_lstsize.c \
 			list_ops/ft_lstmin.c \
+			list_ops/ft_lstmax.c \
 
 OPERATIONS =operations/ft_sa.c \
 			operations/ft_sb.c \
