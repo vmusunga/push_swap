@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:20:10 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/12/28 15:18:20 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/12/28 16:27:33 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,25 +44,7 @@ void	ft_wich_min(t_list **stack_a)
 	return ;
 }
 
-/*int	ft_greater_than(t_list *stack, int top_nb)     //in progress
-{
-	t_list *current;
-	int x;
 
-	if (!stack)
-		return (0);
-
-	current = stack;
-	x = top_nb + 1;   //should be x = ft_lstmax(&stack)
-	while (current)
-	{
-		if (top_nb < current->content && current->content < x)
-			x = current->content;
-		current = current->next;
-	}
-	free(current);
-	return (x);
-}*/
 
 int	ft_lesser_than(t_list *stack, int top_nb)     //in progress
 {
@@ -113,8 +95,25 @@ void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 }
 
 
+/*int	ft_greater_than(t_list *stack, int top_nb)     //in progress
+{
+	t_list *current;
+	int x;
 
+	if (!stack)
+		return (0);
 
+	current = stack;
+	x = top_nb + 1;   //should be x = ft_lstmax(&stack)
+	while (current)
+	{
+		if (top_nb < current->content && current->content < x)
+			x = current->content;
+		current = current->next;
+	}
+	free(current);
+	return (x);
+}*/
 
 /*void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)         //sends to stack_b, from lesser to greater
 {
