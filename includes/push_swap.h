@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/12/06 15:15:40 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/12/28 15:01:54 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ char	*ft_tabtab_to_tab(char **tab);
 int	ft_count_double_tab(char **tab);
 int	ft_wich_half(t_list **stack, int min);
 int	ft_n_ops(t_list **stack_a, int min);
-void	ft_min_to_top(t_list **stack, int min);
-void	ft_min_to_top_b(t_list **stack, int min);
+void	ft_nb_to_top(t_list **stack, int min);
+void	ft_nb_to_top_b(t_list **stack, int min);
 void	ft_wich_min(t_list **stack_a);
 
 
