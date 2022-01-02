@@ -3,34 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/06 12:13:30 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/02 22:07:54 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
-
-/*void	print_list_test(t_list *list)
-{
-	int n;
-	
-	n = 0;
-	while (list)
-	{
-		n = list->content;
-		printf("%d", list->content);
-		while (n > 0)
-		{
-			printf("%c", '-');
-			n--;
-		}
-		printf("\n");
-		list = list->next;
-	}
-	return ;
-}*/
 
 void	print_list(t_list *stack_a, t_list *stack_b)
 {
@@ -80,7 +60,7 @@ int	*char_to_int(char *input)
 			return (NULL);
 		i++;
 	}
-	new[i] = 0;
+	new[i] = '\0';
 	//ft_free(tab_char, len);
 	return (new);
 }
@@ -140,7 +120,7 @@ int	main(int ac, char **argv)
 		i++;
 	}
 	
-	print_list(stack_a, stack_b);
+	//print_list(stack_a, stack_b);
 	printf("\n");
 	ft_redirect(&stack_a, &stack_b);
 

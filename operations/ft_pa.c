@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pa.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 12:32:49 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/27 16:42:01 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/02 21:15:09 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_pa(t_list **stack_a, t_list **stack_b, int write_out) //LEAKS
 	if (!*stack_a)
 	{
 		first->next = 0;
-		*stack_b = first;
+		*stack_a = first;
 	}
 	else
 		ft_lstadd_front(stack_a, first);

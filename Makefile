@@ -1,4 +1,4 @@
-LIBFT =		libft/ft_strlen.c \
+LIBFT 	=	libft/ft_strlen.c \
 			libft/ft_atoi.c \
 			libft/ft_split.c \
 			libft/ft_isdigit.c \
@@ -45,27 +45,26 @@ SRCS =	$(ALGO) \
 		$(LIBFT) \
 		$(UTILITY) \
 		$(LIST_OPS) \
-		$(OPERATIONS) \
+		$(OPERATIONS)\
 		main.c
 
-BONUS = 
-
+NAME	=	push_swap
+CC		=	gcc
+FLAGS	=	-Wall -Werror -Wextra
 INCLUDE =	-I include
+BONUS =
 
 OBJS	=		$(SRCS:.c=.o)
 OBJS_BONUS =	$(BONUS:.c=.o)
 EXEC = push_swap
 
-NAME	=		push_swap
-CC		=		gcc
-FLAGS	=		-Wall -Werror -Wextra
-RM		=		rm -f
+RM		=		@rm -f
 
 .c.o:
-			$(CC) $(FLAGS) -c -I include $< -o $(<:.c=.o)
+			@$(CC) $(FLAGS) -c -I include $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
-			$(CC) $(FLAGS) $(OBJS) -o $(EXEC)
+			@$(CC) $(FLAGS) $(OBJS) -o $(EXEC)
 
 all:		$(NAME)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hundred_elem_sort.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:20:10 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/12/28 16:27:33 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/02 21:17:29 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ void	ft_wich_min(t_list **stack_a)
 	return ;
 }
 
-
-
 int	ft_lesser_than(t_list *stack, int top_nb)     //in progress
 {
 	t_list *current;
@@ -72,7 +70,7 @@ void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 
 	len = ft_lstsize(*stack_a);
 	chunk = len;
-	while (chunk != 0)
+	while (chunk && *stack_a)
 	{
 		ft_wich_min(stack_a);   //sends correct min to top of A
 		if (*stack_b)
@@ -84,13 +82,13 @@ void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 			else
 				ft_nb_to_top(stack_b, ft_lstmax(stack_b));
 		}
-		print_list(*stack_a, *stack_b);
 		ft_pb(stack_a, stack_b, 1);
+		//print_list(*stack_a, *stack_b);
 		ft_nb_to_top(stack_b, ft_lstmax(stack_b));
 		chunk--;
 	}
-	//while (stack_b)
-	//	ft_pa(stack_a, stack_b, 1);
+	while (chunk++ < len)
+		ft_pa(stack_a, stack_b, 1);
 	return ;
 }
 

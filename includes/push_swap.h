@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/12/28 15:01:54 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/02 21:10:32 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,6 @@ void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len);
 void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b);
 int	ft_output_check(t_list **stack_a);
 
+
+void	ft_test_pa(t_list **stack_a, t_list **stack_b);
 #endif

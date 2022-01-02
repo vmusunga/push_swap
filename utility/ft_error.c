@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:10:47 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/12/28 18:50:47 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/02 21:41:00 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	ft_error(int *new, int i, char *input)			// !!LEAKS!! //
 		if (input[x] == '-' && (ft_isdigit(input[x+1]) != 1))
 			return(4);
 		// lone zero (needed?)
-		if (input[x] == '0' && (ft_isdigit(input[x-1]) != 1))
-			return(5);
+		//if (input[x] == '0' && (ft_isdigit(input[x-1]) != 1))
+		//	return(5);
 		x++;
 	}
 	if (new[i] >= INT_MAX || new[i] <= INT_MIN)

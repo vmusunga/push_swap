@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_redirect.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:35:28 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/09 22:28:54 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/02 21:41:06 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,8 @@ void	ft_redirect(t_list **stack_a, t_list **stack_b)
 		ft_five_elem_sort(stack_a, stack_b, len);
 	if (len > 5 && len <= 100)
 		ft_hundred_elem_sort(stack_a, stack_b);
-	//ft_pb(stack_a, stack_b, 1);
-	
 	print_list(*stack_a, *stack_b);
 	ft_output_check(stack_a);
 	
-	//ft_ss(stack_a, stack_b, 1);
-	//ft_rr(stack_a, stack_b, 1);
-	//ft_rrr(stack_a, stack_b, 1);
 	return ;
 }
