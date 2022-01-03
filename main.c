@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/02 22:07:54 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/03 02:45:57 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	print_list(t_list *stack_a, t_list *stack_b)
 // atois it into int *tab
 // frees char **tab
 
-int	*char_to_int(char *input)
+int	*char_to_int(char *input, t_utils *utils)
 {
 	char **tab_char;
 	int *new;
@@ -61,11 +61,12 @@ int	*char_to_int(char *input)
 		i++;
 	}
 	new[i] = '\0';
+	utils->input_len = i;
 	//ft_free(tab_char, len);
 	return (new);
 }
 
-int	*single_argv(char **argv)
+int	*single_argv(char **argv, t_utils *utils)
 {
 	int *tab;
 	char *input;
@@ -73,19 +74,19 @@ int	*single_argv(char **argv)
 	
 	i = 0;
 	input = argv[1];
-	tab = char_to_int(input);
+	tab = char_to_int(input, utils);
 	if (!tab)
 		return (NULL);
 	return (tab);
 }
 
-int *multi_argv(char **argv)
+int *multi_argv(char **argv, t_utils *utils)
 {
-	int *tab;
 	char *input;
+	int *tab;
 	
 	input = ft_tabtab_to_tab(argv);
-	tab = char_to_int(input);
+	tab = char_to_int(input, utils);
 	if (!tab)
 		return (NULL);
 	free(input);
@@ -95,33 +96,31 @@ int *multi_argv(char **argv)
 int	main(int ac, char **argv)
 {
 	int	i;
-	int len;
 	int *tab;
 	t_list *stack_a;
 	t_list *stack_b;
+	t_utils utils;
 
 	tab = 0;
 	stack_a = 0;				//malloc?
 	stack_b = 0;				//malloc?
 	if (ac == 2)
-		tab = single_argv(argv);
+		tab = single_argv(argv, &utils);
 	if (ac > 2)
-		tab = multi_argv(argv);
+		tab = multi_argv(argv, &utils);
 	if (!tab)
 	{
 		printf("Error\n");
 		exit(EXIT_FAILURE);
 	}
-	len = ft_intlen(tab);
 	i = 0;
-	while (i < len)
+	while (i < utils.input_len)
 	{
 		ft_lstadd_back(&stack_a, ft_lstnew(tab[i]));
 		i++;
 	}
-	
 	//print_list(stack_a, stack_b);
-	printf("\n");
+	//printf("\n");
 	ft_redirect(&stack_a, &stack_b);
 
 	free(tab);

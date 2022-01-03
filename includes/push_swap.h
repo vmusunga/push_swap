@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/02 21:10:32 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/03 02:13:01 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ typedef struct s_list
 	struct s_list	*next;
 	struct s_list	*previous;
 }				t_list;
+
+typedef struct s_utils
+{
+	int		input_len;
+}				t_utils;
 
 void	print_list(t_list *list1, t_list *list2);
 
