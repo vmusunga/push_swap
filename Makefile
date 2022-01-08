@@ -4,14 +4,14 @@ LIBFT 	=	libft/ft_strlen.c \
 			libft/ft_isdigit.c \
 			libft/ft_putendl_fd.c \
 
-UTILITY =	utility/ft_intlen.c \
-			utility/ft_check_doubles.c \
+UTILITY =	utility/ft_check_doubles.c \
 			utility/ft_error.c \
 			utility/ft_free.c \
 			utility/ft_tabtab_to_tab.c \
 			utility/ft_count_double_tab.c \
 			utility/ft_nb_to_top.c \
 			utility/ft_n_ops.c \
+			utility/ft_greater_than.c \
 
 LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstadd_back.c\
@@ -41,7 +41,8 @@ ALGO =	algorithms/ft_redirect.c \
 		algorithms/ft_hundred_elem_sort.c \
 		algorithms/ft_output_check.c \
 
-SRCS =	$(ALGO) \
+SRCS =	draft.c \
+		$(ALGO) \
 		$(LIBFT) \
 		$(UTILITY) \
 		$(LIST_OPS) \

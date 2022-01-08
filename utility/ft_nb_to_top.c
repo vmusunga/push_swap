@@ -1,16 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min_to_top.c                                    :+:      :+:    :+:   */
+/*   ft_nb_to_top.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 21:37:13 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/12/28 15:01:37 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/08 16:24:36 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+int	ft_wich_half(t_list **stack, int min)
+{
+	int len;
+	int pos;
+	t_list *buff;
+	
+	len = ft_lstsize(*stack);
+	buff = *stack;
+	pos = 0;
+	while (buff->content != min)
+	{
+		buff = buff->next;
+		pos++;
+	}
+	if (pos <= len / 2)
+		return(0);
+	return (1);
+}
 
 void	ft_nb_to_top(t_list **stack, int nb)
 {
