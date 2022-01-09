@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:22:58 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/12 17:39:23 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:08:49 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(int tab)
 {
-	t_list *new;
+	t_list	*new;
 
 	new = malloc(sizeof(t_list));
 	if (!new)

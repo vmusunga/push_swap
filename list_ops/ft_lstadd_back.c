@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 11:30:40 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/25 13:13:40 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:06:04 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *buff;
+	t_list	*buff;
 
 	buff = *lst;
 	if (buff == 0)

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 19:19:29 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/31 02:36:43 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:25:12 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_tabtab_to_tab(char **tab)
 {
-	int i;
-	int x;
-	int y;
-	int len;
-	char *input;
-	
+	int		i;
+	int		x;
+	int		y;
+	int		len;
+	char	*input;
+
 	len = ft_count_double_tab(tab);
 	if (!(input = malloc(sizeof(char) * (len * 2) + 1)))
 		return (NULL);

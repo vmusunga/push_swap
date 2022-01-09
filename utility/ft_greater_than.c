@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 18:07:13 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/08 18:08:39 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:32:21 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_lesser_than(t_list *stack, int top_nb)
 {
-	t_list *current;
-	int x;
-	
+	int		x;
+	t_list	*current;
+
 	if (!stack)
 		return (0);
 	current = stack;
@@ -33,12 +33,11 @@ int	ft_lesser_than(t_list *stack, int top_nb)
 
 int	ft_greater_than(t_list *stack, int top_nb)
 {
-	t_list *current;
-	int x;
+	int		x;
+	t_list	*current;
 
 	if (!stack)
 		return (0);
-
 	current = stack;
 	x = ft_lstmax(&stack);
 	while (current)

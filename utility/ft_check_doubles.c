@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 12:13:29 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/11 13:39:59 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:31:36 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_check_doubles(int *tab, int i)
 {
-	int x;
+	int	x;
 
 	x = 0;
 	while (x < i)

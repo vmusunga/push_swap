@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 15:11:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/12/06 15:13:09 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:11:00 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_lstmax(t_list **stack)
 {
-	int max;
-	t_list *current;
+	int		max;
+	t_list	*current;
+
 	if (!stack || !*stack)
 		return (0);
-
 	current = (*stack);
 	max = current->content;
 	current = (*stack)->next;

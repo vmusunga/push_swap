@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 21:37:13 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/08 16:24:36 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:32:02 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_wich_half(t_list **stack, int min)
 {
-	int len;
-	int pos;
-	t_list *buff;
-	
+	int		len;
+	int		pos;
+	t_list	*buff;
+
 	len = ft_lstsize(*stack);
 	buff = *stack;
 	pos = 0;
@@ -27,7 +27,7 @@ int	ft_wich_half(t_list **stack, int min)
 		pos++;
 	}
 	if (pos <= len / 2)
-		return(0);
+		return (0);
 	return (1);
 }
 

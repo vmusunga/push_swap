@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 17:39:01 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/10/27 13:00:22 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:19:50 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 int	ft_rrb(t_list **stack_b, int write_out)
 {
-	t_list *last;
-	t_list *Olast;
+	t_list	*last;
+	t_list	*o_last;
 
 	if ((!stack_b) || (!*stack_b) || (*stack_b)->next == 0)
 		return (0);
 	last = *stack_b;
-	Olast = last->previous;
+	o_last = last->previous;
 	while (last->next)
 	{
-		Olast = last;
+		o_last = last;
 		last = last->next;
 	}
-	Olast->next = 0;
+	o_last->next = 0;
 	last->next = *stack_b;
 	*stack_b = last;
 	if (write_out)
