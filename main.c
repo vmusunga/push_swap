@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/08 14:39:10 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/10 16:46:07 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	*char_to_int(char *input, t_utils *utils)
 	}
 	new[i] = '\0';
 	utils->input_len = i;
-	//ft_free(tab_char, len);
+	ft_free(tab_char, len);
 	return (new);
 }
 
