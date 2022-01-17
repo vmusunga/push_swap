@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/10 16:46:07 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/17 12:49:06 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	print_list(t_list *stack_a, t_list *stack_b)
 	int n;
 	
 	n = 0;
-	printf("a b\n");
+	printf("a	b\n");
 	while (stack_a || stack_b)
 	{
 		if (stack_a)
@@ -104,13 +104,15 @@ int	main(int ac, char **argv)
 	tab = 0;
 	stack_a = 0;				//malloc?
 	stack_b = 0;				//malloc?
+	if (ac < 2)
+		return (0);
 	if (ac == 2)
 		tab = single_argv(argv, &utils);
 	if (ac > 2)
 		tab = multi_argv(argv, &utils);
-	if (!tab || ac < 2)
+	if (!tab)
 	{
-		printf("Error\n");
+		write(2, "Error\n", 6);
 		exit(EXIT_FAILURE);
 	}
 	i = 0;
