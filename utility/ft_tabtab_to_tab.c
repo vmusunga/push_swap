@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tabtab_to_tab.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 19:19:29 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/09 14:25:12 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/17 15:19:46 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_tabtab_to_tab(char **tab)
 	char	*input;
 
 	len = ft_count_double_tab(tab);
-	if (!(input = malloc(sizeof(char) * (len * 2) + 1)))
+	input = malloc(sizeof(char) * (len * 2) + 1);
+	if (!input)
 		return (NULL);
 	x = 1;
 	i = 0;
@@ -29,11 +30,7 @@ char	*ft_tabtab_to_tab(char **tab)
 	{
 		y = 0;
 		while (tab[x][y])
-		{
-			input[i] = tab[x][y];
-			i++;
-			y++;
-		}
+			input[i++] = tab[x][y++];
 	input[i++] = ' ';
 	x++;
 	}

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:35:28 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/17 12:23:18 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/17 15:01:01 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_redirect(t_list **stack_a, t_list **stack_b)
 {
-	int len;
-	
+	int	len;
+
 	len = ft_lstsize(*stack_a);
 	if (!ft_output_check(stack_a, 0))
 		return ;

@@ -6,12 +6,11 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 12:58:08 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/17 13:31:39 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/17 15:14:01 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
-
 
 void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 {

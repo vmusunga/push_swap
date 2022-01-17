@@ -6,13 +6,13 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 17:29:59 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/10 17:45:21 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/17 15:16:58 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_n_ops(t_list **stack_a, int min)    //NO FREE NEEDED
+int	ft_n_ops(t_list **stack_a, int min)
 {
 	int		len;
 	int		pos;

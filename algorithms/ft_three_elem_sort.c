@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_three_elem_sort.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:47:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/11/06 13:57:13 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/17 15:00:21 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,28 @@
 
 void	ft_three_elem_sort(t_list **lst)
 {
-	int first;
-	int sec;
-	int third;
-	
-	first = (*lst)->content;
+	int	sec;
+	int	third;
+
 	sec = (*lst)->next->content;
 	third = (*lst)->next->next->content;
-	
 	if (!lst || !*lst)
 		return ;
-	if (first > sec && first > third && sec > third)
+	if ((*lst)->content > sec && (*lst)->content > third && sec > third)
 	{
 		ft_sa(lst, 1);
 		ft_rra(lst, 1);
 	}
-	else if (first < sec && first < third && third < sec)
+	else if ((*lst)->content < sec && (*lst)->content < third && third < sec)
 	{
 		ft_sa(lst, 1);
 		ft_ra(lst, 1);
 	}
-	else if (first > third && sec < third)
+	else if ((*lst)->content > third && sec < third)
 		ft_ra(lst, 1);
-	else if (first > sec)
+	else if ((*lst)->content > sec)
 		ft_sa(lst, 1);
-	else if (first < sec && sec > third)
+	else if ((*lst)->content < sec && sec > third)
 		ft_rra(lst, 1);
 	return ;
 }

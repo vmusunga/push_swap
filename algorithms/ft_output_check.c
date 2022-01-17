@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_output_check.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 13:16:04 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/08 16:16:51 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/17 15:01:34 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_output_check(t_list **stack_a, int i)
 {
-	t_list *current;
-	
+	t_list	*current;
+
 	current = *stack_a;
 	while (current->next != 0)
 	{
