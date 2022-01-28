@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 12:28:20 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/09 14:22:40 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/01/27 11:36:31 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	**ft_free(char **tab, int x)
 	int	i;
 
 	i = 0;
-	while (i < x && tab[i] != '\0')
+	while (i < x && tab[i])
 	{
 		free(tab[i]);
 		i++;
