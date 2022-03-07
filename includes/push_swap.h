@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/10 17:20:26 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/03/07 13:48:38 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int		ft_n_ops(t_list **stack_a, int min);
 void	ft_nb_to_top(t_list **stack, int min);
 void	ft_nb_to_top_b(t_list **stack, int min);
 void	ft_wich_min(t_list **stack_a);
+void	ft_wich_min_set(t_list **stack_a, int min_set);
 int		ft_sec_min(t_list **stack_a, int min1);
 
 //LIST_OPS
