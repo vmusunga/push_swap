@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 12:58:08 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/03/08 16:36:15 by vic              ###   ########.fr       */
+/*   Updated: 2022/03/21 16:40:11 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,35 +25,43 @@ void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 	i = 0;
 	while (*stack_a && i <= chunk)
 	{
-		// printf("\nmin_set = %d\n", min_set); //out of loop (+1)
+		// printf("\nmin_set = %d\n", min_set);
 		// printf("\nI = %d\n", i);
-		// printf("\nchunk = %d\n", chunk);
+		// printf("chunk = %d\n", chunk);
 		if (i == chunk) 
 		{
-			if (ft_lstmax(stack_b) < ft_lstmin(stack_a))
+			if (ft_lstmin(stack_b) < ft_lstmin(stack_a))
 			{
 				min_set = ft_lstmax(stack_b);
+				// printf("\nmin_set = %d\n", min_set);
 				ft_nb_to_top(stack_b, ft_lstmax(stack_b));
 				ft_nb_to_top(stack_a, ft_lstmin(stack_a));
-				while (i--)
+				while (*stack_b)
 				{
-					ft_pa(stack_a, stack_b, 1);		//if more than i in B, some stuck
-					//i--;
+					ft_pa(stack_a, stack_b, 1);
+					i = 0;
 				}
 				ft_wich_min_set(stack_a, min_set);   // TRIES TO send correct min to top of A
-				//print_list(*stack_a, *stack_b);
-
+				// print_list(*stack_a, *stack_b);
 			}
 			if (ft_lstmin(stack_a) < ft_lstmax(stack_b))
 			{
-				ft_nb_to_top(stack_a, ft_lstmin(stack_a));
+				if (ft_lstmin(stack_a) == min_set)
+					ft_nb_to_top(stack_a, ft_lstmin(stack_a));  
+				else
+					ft_wich_min_set(stack_a, min_set);
+				// printf("\nHERE\n");
+				// print_list(*stack_a, *stack_b);
 				i = 0;
 			}
-			//print_list(*stack_a, *stack_b);
+			// print_list(*stack_a, *stack_b);
 			// chunk += len / 6;
 		}
 		else
+		{
 			ft_wich_min_set(stack_a, min_set);   //TRIES TO send correct min to top of A
+			// printf("\n BUG?\n");
+		}
 		if (*stack_b)
 		{
 			if ((*stack_a)->content < ft_lstmin(stack_b))
@@ -63,12 +71,16 @@ void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
 			if ((*stack_a)->content > ft_lstmax(stack_b))
 				ft_nb_to_top(stack_b, ft_lstmax(stack_b));
 		}
+		if (!(*stack_b) && !ft_output_check(stack_a, 0))
+			return ;
 		ft_pb(stack_a, stack_b, 1);
 		i++;
-		print_list(*stack_a, *stack_b);
+		// print_list(*stack_a, *stack_b);
 	}
 	while (*stack_b)
 		ft_pa(stack_a, stack_b, 1);
+	if (ft_lstmin(stack_a) != (*stack_a)->content)
+		ft_nb_to_top(stack_a, ft_lstmin(stack_a));
 	return ;
 }
 

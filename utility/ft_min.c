@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 17:19:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/03/08 16:51:27 by vic              ###   ########.fr       */
+/*   Updated: 2022/03/14 21:13:33 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,12 @@ int	ft_sec_min_set(t_list **stack_a, int min_set)
 	t_list	*current;
 
 	current = (*stack_a);
-	min2 = current->content;
+	//min2 = current->content;
+	min2 = ft_lstmax(stack_a);
 	current = (*stack_a)->next;
 	while (current)
 	{
-		if (current->content < min2 && current->content > min_set)
+		if (current->content <= min2 && current->content > min_set)
 			min2 = current->content;
 		current = current->next;
 	}
