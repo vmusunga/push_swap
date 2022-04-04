@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/03/07 15:47:56 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/04 15:55:51 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	print_list(t_list *stack_a, t_list *stack_b)
 {
-	int n;
-	
+	int	n;
+
 	n = 0;
 	printf("\n");
 	printf("A	B\n");
@@ -37,19 +37,19 @@ void	print_list(t_list *stack_a, t_list *stack_b)
 	return ;
 }
 
-// splits the input in char **tab
-// atois it into int *tab
-// frees char **tab
+/// splits the input in char **tab
+/// atois it into int *tab
+/// frees char **tab
 
 int	*char_to_int(char *input, t_utils *utils)
 {
-	char **tab_char;
-	int *new;
-	int len;
-	int i;
+	char	**tab_char;
+	int		*new;
+	int		len;
+	int		i;
 
 	len = 0;
-	tab_char = ft_split(input, ' ');
+	tab_char = ft_split(input, ' ', 0);
 	while (tab_char[len])
 		len++;
 	new = malloc(sizeof(int) * len);
@@ -58,7 +58,10 @@ int	*char_to_int(char *input, t_utils *utils)
 	{
 		new[i] = ft_atoi(tab_char[i]);
 		if (ft_error(new, i, input) != 0)
+		{
+			ft_free(tab_char, len);
 			return (NULL);
+		}
 		i++;
 	}
 	new[i] = '\0';
@@ -69,10 +72,10 @@ int	*char_to_int(char *input, t_utils *utils)
 
 int	*single_argv(char **argv, t_utils *utils)
 {
-	int *tab;
-	char *input;
-	int i;
-	
+	int		*tab;
+	char	*input;
+	int		i;
+
 	i = 0;
 	input = argv[1];
 	tab = char_to_int(input, utils);
@@ -81,11 +84,11 @@ int	*single_argv(char **argv, t_utils *utils)
 	return (tab);
 }
 
-int *multi_argv(char **argv, t_utils *utils)
+int	*multi_argv(char **argv, t_utils *utils)
 {
-	char *input;
-	int *tab;
-	
+	char	*input;
+	int		*tab;
+
 	input = ft_tabtab_to_tab(argv);
 	tab = char_to_int(input, utils);
 	if (!tab)
@@ -96,15 +99,15 @@ int *multi_argv(char **argv, t_utils *utils)
 
 int	main(int ac, char **argv)
 {
-	int	i;
-	int *tab;
-	t_list *stack_a;
-	t_list *stack_b;
-	t_utils utils;
+	int		i;
+	int		*tab;
+	t_list	*stack_a;
+	t_list	*stack_b;
+	t_utils	utils;
 
 	tab = 0;
-	stack_a = 0;				//malloc?
-	stack_b = 0;				//malloc?
+	stack_a = 0;
+	stack_b = 0;
 	if (ac < 2)
 		return (0);
 	if (ac == 2)
@@ -122,10 +125,7 @@ int	main(int ac, char **argv)
 		ft_lstadd_back(&stack_a, ft_lstnew(tab[i]));
 		i++;
 	}
-	//print_list(stack_a, stack_b);
-	//printf("\n");
 	ft_redirect(&stack_a, &stack_b);
-
 	free(tab);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);

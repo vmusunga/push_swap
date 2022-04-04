@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pa.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 12:32:49 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/09 14:19:45 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/04 14:59:46 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_pa(t_list **stack_a, t_list **stack_b, int write_out) //LEAKS
+int	ft_pa(t_list **stack_a, t_list **stack_b, int write_out)
 {
 	t_list	*first;
 
@@ -29,7 +29,5 @@ int	ft_pa(t_list **stack_a, t_list **stack_b, int write_out) //LEAKS
 		ft_lstadd_front(stack_a, first);
 	if (write_out)
 		ft_putendl_fd("pa", STDOUT);
-	//free(first);
-	//first = 0;
 	return (1);
 }

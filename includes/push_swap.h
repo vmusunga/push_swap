@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/03/07 13:48:38 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/04 15:56:27 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	print_list(t_list *list1, t_list *list2);
 //LIBFT
 size_t	ft_strlen(const char *str);
 int		ft_atoi(const char *str);
-char	**ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c, int i);
 int		ft_isdigit_extended(int c);
 int		ft_isdigit(int c);
 void	ft_putendl_fd(char *s, int fd);
@@ -53,7 +53,6 @@ int		ft_n_ops(t_list **stack_a, int min);
 void	ft_nb_to_top(t_list **stack, int min);
 void	ft_nb_to_top_b(t_list **stack, int min);
 void	ft_wich_min(t_list **stack_a);
-void	ft_wich_min_set(t_list **stack_a, int min_set);
 int		ft_sec_min(t_list **stack_a, int min1);
 
 //LIST_OPS

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 17:29:59 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/10 17:37:16 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/04 14:27:47 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len)
 			ft_nb_to_top(stack_a, ft_lstmin(stack_a));
 		ft_pa(stack_a, stack_b, 1);
 	}
-	while ((*stack_a)->content != ft_lstmin(stack_a))
-		ft_nb_to_top(stack_a, ft_lstmin(stack_a));
+	ft_nb_to_top(stack_a, ft_lstmin(stack_a));
 	return ;
 }

@@ -6,13 +6,13 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:10:47 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/01/10 17:44:46 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/04 15:20:31 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_free2(int *tab1, char *tab2)     //LEAK SOMEWEHRE
+void	ft_free2(int *tab1, char *tab2)
 {
 	free(tab1);
 	free(tab2);
