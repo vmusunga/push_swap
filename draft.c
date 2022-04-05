@@ -6,78 +6,67 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:47:48 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/05 17:02:16 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/05 18:56:15 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-/// checks if chunk is completed
-int	ft_chunk_check(t_list **stack, int chunk)
+int	*ft_list_to_tab(t_list **stack)
 {
+	int *tab0;
+	int i;
 	t_list *current;
 
+	i = 0;
 	current = (*stack);
+	tab0 = malloc(sizeof(int) * (ft_lstsize(*stack) + 1));
+	if (!tab0)
+		return (0);
 	while (current)
 	{
-		if (current->content <= chunk)
-			return (1);
+		tab0[i] = current->content;
+		current = current->next;
+		i++;
+	}
+	return (tab0);
+}
+
+t_list	**ft_lstcpy(t_list **stack)
+{
+	t_list	**cpy;
+	t_list	*current;
+
+	current = (*stack);
+	cpy = malloc(sizeof(t_list));
+	if (!cpy)
+		return (NULL);
+	while (current)
+	{
+		(*cpy)->content = current->content;
+		(*cpy) = (*cpy)->next;
 		current = current->next;
 	}
-	return (0);
+	return (cpy);
 }
 
-void	ft_wich_min_chunk(t_list **stack_a, int chunk)
+int *ft_sorted_list_tab(t_list **stack_a, t_list **stack_b)
 {
-	int	min1;
-	int	min2;
+	int *tab1;
+	int i;
+	//t_list **cpy;
 
-	min1 = ft_lstmin(stack_a);
-	min2 = ft_sec_min(stack_a, min1);
-	if (ft_n_ops(stack_a, min1) <= ft_n_ops(stack_a, min2))
-		ft_nb_to_top(stack_a, min1);
-	if (ft_n_ops(stack_a, min2) < ft_n_ops(stack_a, min1) && min2 <= chunk)
-		ft_nb_to_top(stack_a, min2);
-	return ;
-}
-
-void	ft_five_hundred_elem_sort(t_list **stack_a, t_list **stack_b)
-{
-	int chunk;
-	int len;
-
-	len = ft_lstsize(*stack_a);
-	chunk = len / 4;
-
-	while (chunk <= len)
+	i = 0;
+	//cpy = ft_lstcpy(stack_a);
+	tab1 = malloc(sizeof(int) * (ft_lstsize(*stack_a) + 1));
+	if (!tab1)
+		return (0);
+	ft_hundred_elem_sort(stack_a, stack_b);
+	while (cpy)
 	{
-		while (ft_chunk_check(stack_a, chunk) == 1)
-		{
-			ft_wich_min_chunk(stack_a, chunk);
-			// print_list(*stack_a, *stack_b);
-			ft_pb(stack_a, stack_b, 1);
-		}
-			// print_list(*stack_a, *stack_b);
-		if (!ft_chunk_check(stack_a, chunk))
-			chunk += len/5;
+		tab1[i] = (*cpy)->content;
+		(*cpy) = (*cpy)->next;
+		i++;
 	}
-
-	ft_nb_to_top_b(stack_b, ft_lstmax(stack_b));
-
-	while (*stack_b)
-		{
-			// print_list(*stack_a, *stack_b);
-			if (!(*stack_a))
-				ft_pa(stack_a, stack_b, 1);
-			// print_list(*stack_a, *stack_b);
-			if ((*stack_b)->content < ft_lstmin(stack_a))
-				ft_nb_to_top(stack_a, ft_lstmin(stack_a));   //ensure the max is on top before pushing
-			if ((*stack_b)->content > ft_lstmin(stack_a) && (*stack_b)->content < ft_lstmax(stack_a))
-				ft_nb_to_top(stack_a, ft_greater_than(*stack_a, (*stack_b)->content));   //if between min & max, find right one
-			else
-				ft_nb_to_top(stack_a, ft_lstmin(stack_a));
-			ft_pa(stack_a, stack_b, 1);
-		}
-	ft_nb_to_top(stack_a, ft_lstmin(stack_a));
-	return ;
+	return (tab1);
 }

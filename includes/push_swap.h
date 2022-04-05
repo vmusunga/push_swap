@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/05 14:06:59 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/05 18:47:05 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,7 @@ void	ft_five_hundred_elem_sort(t_list **stack_a, t_list **stack_b);
 //DRAFT
 int		ft_greater_than(t_list *stack, int top_nb);
 int		ft_lesser_than(t_list *stack, int top_nb);
+int	*ft_list_to_tab(t_list **stack);
+int	*ft_sorted_list_tab(t_list **stack, t_list **stack_b);
 
 #endif

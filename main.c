@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/04 15:55:51 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/05 18:53:08 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,20 @@ int	main(int ac, char **argv)
 		i++;
 	}
 	ft_redirect(&stack_a, &stack_b);
+
+	int *tab0;
+	int *tab1;
+	int x = 0;
+
+	tab0 = ft_list_to_tab(&stack_a);
+	tab1 = ft_sorted_list_tab(&stack_a, &stack_b);
+	while (x++ <= 9)
+		printf("%d", tab0[x]);
+	x = 0;
+	while (x++ <= 9)
+		printf("-- %d", tab1[x]);
+	//print_list(stack_a, stack_b);
+
 	free(tab);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
