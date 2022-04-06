@@ -3,14 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hundred_elem_sort.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:20:10 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/04 17:39:30 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/06 15:48:55 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void	first_steps(t_list **stack_a, t_list **stack_b, t_utils *utils)
+{
+	int *tab0;
+	int *tab1;
+	
+	tab0 = ft_list_to_tab(stack_a);
+	ft_hundred_elem_sort(stack_a, stack_b);
+	tab1 = ft_list_to_tab(stack_a);
+
+
+	return ;
+}
+
+int ft_index(t_utils *utils, int *tab0, int *tab1)
+{
+	int i;
+	int j;
+	
+	i = 0;
+	while (i < utils->input_len)
+	{
+		j = 0;
+		while (j < utils->input_len)
+		{
+			if (tab0[i] == tab1[j])
+			{
+
+			}
+		}
+	}
+}
+
 
 /// WORKING READABLE SAVE
 void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)

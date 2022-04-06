@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/05 18:53:08 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/06 15:25:46 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,21 @@ int	*multi_argv(char **argv, t_utils *utils)
 	return (tab);
 }
 
+t_list **ft_tab_to_list(int *tab, t_list **stack, t_utils *utils)
+{
+	int i; 
+
+	i = 0;
+	while (i < utils->input_len)
+	{
+		ft_lstadd_back(stack, ft_lstnew(tab[i]));
+		i++;
+	}
+	return (0);
+}
+
 int	main(int ac, char **argv)
 {
-	int		i;
 	int		*tab;
 	t_list	*stack_a;
 	t_list	*stack_b;
@@ -119,26 +131,9 @@ int	main(int ac, char **argv)
 		write(2, "Error\n", 6);
 		exit(EXIT_FAILURE);
 	}
-	i = 0;
-	while (i < utils.input_len)
-	{
-		ft_lstadd_back(&stack_a, ft_lstnew(tab[i]));
-		i++;
-	}
+	ft_tab_to_list(tab, &stack_a, &utils);
 	ft_redirect(&stack_a, &stack_b);
-
-	int *tab0;
-	int *tab1;
-	int x = 0;
-
-	tab0 = ft_list_to_tab(&stack_a);
-	tab1 = ft_sorted_list_tab(&stack_a, &stack_b);
-	while (x++ <= 9)
-		printf("%d", tab0[x]);
-	x = 0;
-	while (x++ <= 9)
-		printf("-- %d", tab1[x]);
-	//print_list(stack_a, stack_b);
+	// print_list(stack_a, stack_b);
 
 	free(tab);
 	ft_lstclear(&stack_a);

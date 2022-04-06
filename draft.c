@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:47:48 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/05 18:56:15 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/06 15:12:13 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,41 +32,31 @@ int	*ft_list_to_tab(t_list **stack)
 	return (tab0);
 }
 
-t_list	**ft_lstcpy(t_list **stack)
+int	*ft_sort_tab(int *tab)
 {
-	t_list	**cpy;
-	t_list	*current;
-
-	current = (*stack);
-	cpy = malloc(sizeof(t_list));
-	if (!cpy)
-		return (NULL);
-	while (current)
-	{
-		(*cpy)->content = current->content;
-		(*cpy) = (*cpy)->next;
-		current = current->next;
-	}
-	return (cpy);
-}
-
-int *ft_sorted_list_tab(t_list **stack_a, t_list **stack_b)
-{
-	int *tab1;
 	int i;
-	//t_list **cpy;
+	int x;
 
 	i = 0;
-	//cpy = ft_lstcpy(stack_a);
-	tab1 = malloc(sizeof(int) * (ft_lstsize(*stack_a) + 1));
-	if (!tab1)
-		return (0);
-	ft_hundred_elem_sort(stack_a, stack_b);
-	while (cpy)
+	while (tab[i])
 	{
-		tab1[i] = (*cpy)->content;
-		(*cpy) = (*cpy)->next;
+		if (tab[i] > tab[i + 1])
+		{
+			x = tab[i];
+			tab[i] = tab[i + 1];
+			tab[i + 1] = x;
+		}
 		i++;
 	}
-	return (tab1);
+	return (tab);
 }
+
+// int *ft_sorted_list_tab(int *tab1)
+// {
+// 	int i;
+
+// 	return (tab1);
+// }
+
+	// printf("tab0: %d %d %d %d\n", tab0[0], tab0[1], tab0[2], tab0[3]); 
+	// printf("tab1: %d %d %d %d\n", tab1[0], tab1[1], tab1[2], tab1[3]); 
