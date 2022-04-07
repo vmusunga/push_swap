@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:20:10 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/06 15:48:55 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 13:56:19 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ void	first_steps(t_list **stack_a, t_list **stack_b, t_utils *utils)
 	tab0 = ft_list_to_tab(stack_a);
 	ft_hundred_elem_sort(stack_a, stack_b);
 	tab1 = ft_list_to_tab(stack_a);
-
+	ft_index(utils, tab0, tab1);
+	
 
 	return ;
 }
 
-int ft_index(t_utils *utils, int *tab0, int *tab1)
+void	ft_index(t_utils *utils, int *tab0, int *tab1)
 {
 	int i;
 	int j;
@@ -38,12 +39,16 @@ int ft_index(t_utils *utils, int *tab0, int *tab1)
 		{
 			if (tab0[i] == tab1[j])
 			{
-
+				tab0[i] = j;
+				break ;
 			}
+		j++;
 		}
+	i++;
 	}
+	//free all tabs?
+	return ;
 }
-
 
 /// WORKING READABLE SAVE
 void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)

@@ -6,13 +6,13 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:35:28 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/06 15:07:29 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 11:52:58 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_redirect(t_list **stack_a, t_list **stack_b)
+void	ft_redirect(t_list **stack_a, t_list **stack_b, t_utils *utils)
 {
 	int	len;
 
@@ -26,7 +26,7 @@ void	ft_redirect(t_list **stack_a, t_list **stack_b)
 	if (len > 3 && len <= 5)
 		ft_five_elem_sort(stack_a, stack_b, len);
 	if (len > 5 && len <= 100)
-		first_steps(stack_a, stack_b);
+		first_steps(stack_a, stack_b, utils);
 		//ft_hundred_elem_sort(stack_a, stack_b);
 	if (len > 100 && len <= 500)
 		ft_hundred_elem_sort(stack_a, stack_b);

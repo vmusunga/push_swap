@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/06 15:25:46 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 11:52:43 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,7 @@ int	main(int ac, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	ft_tab_to_list(tab, &stack_a, &utils);
-	ft_redirect(&stack_a, &stack_b);
+	ft_redirect(&stack_a, &stack_b, &utils);
 	// print_list(stack_a, stack_b);
 
 	free(tab);

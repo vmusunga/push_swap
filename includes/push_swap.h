@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/06 15:07:46 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 11:53:06 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int		ft_rrr(t_list **stack_a, t_list **stack_b, int fd);
 int		ft_ss(t_list **stack_a, t_list **stack_b, int fd);
 
 //ALGO
-void	ft_redirect(t_list **stack_a, t_list **stack_b);
+void	ft_redirect(t_list **stack_a, t_list **stack_b, t_utils *utils);
 void	ft_two_elem_sort(t_list **stack_a);
 void	ft_three_elem_sort(t_list **lst);
 void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len);
@@ -92,6 +92,7 @@ int		ft_greater_than(t_list *stack, int top_nb);
 int		ft_lesser_than(t_list *stack, int top_nb);
 int	*ft_list_to_tab(t_list **stack);
 int	*ft_sort_tab(int *tab);
-void	first_steps(t_list **stack_a, t_list **stack_b);
+void	first_steps(t_list **stack_a, t_list **stack_b, t_utils *utils);
+void	ft_index(t_utils *utils, int *tab0, int *tab1);
 
 #endif

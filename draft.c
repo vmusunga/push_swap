@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:47:48 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/06 15:12:13 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 11:57:22 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,5 @@ int	*ft_sort_tab(int *tab)
 // 	return (tab1);
 // }
 
-	// printf("tab0: %d %d %d %d\n", tab0[0], tab0[1], tab0[2], tab0[3]); 
-	// printf("tab1: %d %d %d %d\n", tab1[0], tab1[1], tab1[2], tab1[3]); 
+// printf("tab0: %d %d %d %d %d %d %d\n", tab0[0], tab0[1], tab0[2], tab0[3], tab0[4], tab0[5], tab0[6]); 
+// 	printf("tab1: %d %d %d %d %d %d %d\n", tab1[0], tab1[1], tab1[2], tab1[3], tab1[4], tab1[5], tab1[6]); 
