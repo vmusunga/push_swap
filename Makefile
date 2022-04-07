@@ -5,6 +5,7 @@ LIBFT 	=	libft/ft_strlen.c \
 			libft/ft_putendl_fd.c \
 
 UTILITY =	utility/ft_check_doubles.c \
+			utility/print_list.c \
 			utility/ft_error.c \
 			utility/ft_free.c \
 			utility/ft_tabtab_to_tab.c \

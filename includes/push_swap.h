@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/07 11:53:06 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 16:05:06 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int		ft_isdigit(int c);
 void	ft_putendl_fd(char *s, int fd);
 
 //UTILITY
+void	print_list(t_list *stack_a, t_list *stack_b);
 int		ft_check_doubles(int *tab, int i);
 int		ft_error(int *tab, int i, char *input);
 char	**ft_free(char **tab, int x);
@@ -50,9 +51,9 @@ char	*ft_tabtab_to_tab(char **tab);
 int		ft_count_double_tab(char **tab);
 int		ft_wich_half(t_list **stack, int min);
 int		ft_n_ops(t_list **stack_a, int min);
-void	ft_nb_to_top(t_list **stack, int min);
-void	ft_nb_to_top_b(t_list **stack, int min);
-void	ft_wich_min(t_list **stack_a);
+void	ft_nb_to_top(t_list **stack, int min, int swich);
+void	ft_nb_to_top_b(t_list **stack, int min, int swich);
+void	ft_wich_min(t_list **stack_a, int swich);
 int		ft_sec_min(t_list **stack_a, int min1);
 
 //LIST_OPS
@@ -94,5 +95,7 @@ int	*ft_list_to_tab(t_list **stack);
 int	*ft_sort_tab(int *tab);
 void	first_steps(t_list **stack_a, t_list **stack_b, t_utils *utils);
 void	ft_index(t_utils *utils, int *tab0, int *tab1);
+void	ft_index_list(int *tab, t_list **stack_a);
+void	ft_sorting(t_list **stack_a, t_list **stack_b, t_utils *utils);
 
 #endif

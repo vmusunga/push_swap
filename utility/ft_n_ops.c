@@ -6,11 +6,13 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 17:29:59 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/03/21 14:41:49 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 15:30:03 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+/// ATTENTION SWITCHES ENABLED
 
 int	ft_n_ops(t_list **stack_a, int min)
 {
@@ -54,32 +56,32 @@ int	ft_wich_half(t_list **stack, int min)
 	return (1);
 }
 
-void	ft_nb_to_top(t_list **stack, int nb)
+void	ft_nb_to_top(t_list **stack, int nb, int swich)
 {
 	if (!ft_wich_half(stack, nb))
 	{
 		while ((*stack)->content != nb)
-			ft_ra(stack, 1);
+			ft_ra(stack, swich);
 	}
 	else
 	{
 		while ((*stack)->content != nb)
-			ft_rra(stack, 1);
+			ft_rra(stack, swich);
 	}
 	return ;
 }
 
-void	ft_nb_to_top_b(t_list **stack, int nb)
+void	ft_nb_to_top_b(t_list **stack, int nb, int swich)
 {
 	if (!ft_wich_half(stack, nb))
 	{
 		while ((*stack)->content != nb)
-			ft_rb(stack, 1);
+			ft_rb(stack, swich);
 	}
 	else
 	{
 		while ((*stack)->content != nb)
-			ft_rrb(stack, 1);
+			ft_rrb(stack, swich);
 	}
 	return ;
 }

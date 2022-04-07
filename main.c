@@ -6,36 +6,11 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/07 11:52:43 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 16:04:10 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
-
-void	print_list(t_list *stack_a, t_list *stack_b)
-{
-	int	n;
-
-	n = 0;
-	printf("\n");
-	printf("A	B\n");
-	while (stack_a || stack_b)
-	{
-		if (stack_a)
-			printf("%d	", stack_a->content);
-		if (stack_b && stack_a)
-			printf("%d", stack_b->content);
-		if (stack_b && !stack_a)
-			printf("	%d", stack_b->content);
-		printf("\n");
-		if (stack_a)
-			stack_a = stack_a->next;
-		if (stack_b)
-			stack_b = stack_b->next;
-	}
-	printf("\n");
-	return ;
-}
 
 /// splits the input in char **tab
 /// atois it into int *tab
@@ -133,8 +108,6 @@ int	main(int ac, char **argv)
 	}
 	ft_tab_to_list(tab, &stack_a, &utils);
 	ft_redirect(&stack_a, &stack_b, &utils);
-	// print_list(stack_a, stack_b);
-
 	free(tab);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
