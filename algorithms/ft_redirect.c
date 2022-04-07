@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:35:28 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/07 16:04:41 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 16:17:43 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_redirect(t_list **stack_a, t_list **stack_b, t_utils *utils)
 		first_steps(stack_a, stack_b, utils);
 	if (len > 100 && len <= 500)
 		first_steps(stack_a, stack_b, utils);
-	print_list(*stack_a, *stack_b);
-	ft_output_check(stack_a, 1);
+	// print_list(*stack_a, *stack_b);
+	// ft_output_check(stack_a, 1);
 	return ;
 }

@@ -16,6 +16,7 @@ UTILITY =	utility/ft_check_doubles.c \
 
 LIST_OPS =	list_ops/ft_lstnew.c \
 			list_ops/ft_lstadd_back.c\
+			list_ops/ft_tab_to_list.c\
 			list_ops/ft_lstadd_front.c\
 			list_ops/ft_lstlast.c\
 			list_ops/ft_lstclear.c \
@@ -42,8 +43,7 @@ ALGO =	algorithms/ft_redirect.c \
 		algorithms/ft_hundred_elem_sort.c \
 		algorithms/ft_output_check.c \
 
-SRCS =	draft.c \
-		$(ALGO) \
+SRCS =	$(ALGO) \
 		$(LIBFT) \
 		$(UTILITY) \
 		$(LIST_OPS) \

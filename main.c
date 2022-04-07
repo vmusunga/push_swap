@@ -6,15 +6,11 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/07 16:04:10 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 17:02:33 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
-
-/// splits the input in char **tab
-/// atois it into int *tab
-/// frees char **tab
 
 int	*char_to_int(char *input, t_utils *utils)
 {
@@ -70,19 +66,6 @@ int	*multi_argv(char **argv, t_utils *utils)
 		return (NULL);
 	free(input);
 	return (tab);
-}
-
-t_list **ft_tab_to_list(int *tab, t_list **stack, t_utils *utils)
-{
-	int i; 
-
-	i = 0;
-	while (i < utils->input_len)
-	{
-		ft_lstadd_back(stack, ft_lstnew(tab[i]));
-		i++;
-	}
-	return (0);
 }
 
 int	main(int ac, char **argv)

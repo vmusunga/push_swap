@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/07 16:05:06 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 16:23:22 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ void	ft_lstclear(t_list **lst);
 int		ft_lstsize(t_list *lst);
 int		ft_lstmin(t_list **stack);
 int		ft_lstmax(t_list **stack);
+int		*ft_list_to_tab(t_list **stack);
+t_list	**ft_tab_to_list(int *tab, t_list **stack, t_utils *utils);
 
 //OPERATIONS
 int		ft_sa(t_list **stack_a, int write_out);
@@ -91,8 +93,7 @@ void	ft_five_hundred_elem_sort(t_list **stack_a, t_list **stack_b);
 //DRAFT
 int		ft_greater_than(t_list *stack, int top_nb);
 int		ft_lesser_than(t_list *stack, int top_nb);
-int	*ft_list_to_tab(t_list **stack);
-int	*ft_sort_tab(int *tab);
+int		*ft_sort_tab(int *tab);
 void	first_steps(t_list **stack_a, t_list **stack_b, t_utils *utils);
 void	ft_index(t_utils *utils, int *tab0, int *tab1);
 void	ft_index_list(int *tab, t_list **stack_a);
