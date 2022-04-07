@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/07 17:02:33 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 17:47:58 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,7 @@ int	*single_argv(char **argv, t_utils *utils)
 {
 	int		*tab;
 	char	*input;
-	int		i;
 
-	i = 0;
 	input = argv[1];
 	tab = char_to_int(input, utils);
 	if (!tab)

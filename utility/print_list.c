@@ -6,7 +6,7 @@
 /*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 16:03:27 by vic               #+#    #+#             */
-/*   Updated: 2022/04/07 16:04:03 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/07 17:47:34 by vic              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	print_list(t_list *stack_a, t_list *stack_b)
 {
-	int	n;
-
-	n = 0;
 	printf("\n");
 	printf("A	B\n");
 	while (stack_a || stack_b)
