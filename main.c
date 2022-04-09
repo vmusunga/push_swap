@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/07 17:47:58 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/09 16:29:08 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,7 @@ int	main(int ac, char **argv)
 	if (ac > 2)
 		tab = multi_argv(argv, &utils);
 	if (!tab)
-	{
-		write(2, "Error\n", 6);
-		exit(EXIT_FAILURE);
-	}
+		ft_exit();
 	ft_tab_to_list(tab, &stack_a, &utils);
 	ft_redirect(&stack_a, &stack_b, &utils);
 	free(tab);

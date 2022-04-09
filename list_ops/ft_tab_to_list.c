@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tab_to_list.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 16:20:17 by vic               #+#    #+#             */
-/*   Updated: 2022/04/07 16:23:59 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/09 14:58:16 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_list **ft_tab_to_list(int *tab, t_list **stack, t_utils *utils)
+t_list	**ft_tab_to_list(int *tab, t_list **stack, t_utils *utils)
 {
-	int i; 
+	int	i;
 
 	i = 0;
 	while (i < utils->input_len)
@@ -27,9 +27,9 @@ t_list **ft_tab_to_list(int *tab, t_list **stack, t_utils *utils)
 
 int	*ft_list_to_tab(t_list **stack)
 {
-	int *tab0;
-	int i;
-	t_list *current;
+	int		*tab0;
+	int		i;
+	t_list	*current;
 
 	i = 0;
 	current = (*stack);

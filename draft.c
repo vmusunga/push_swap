@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   draft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:47:48 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/07 17:20:06 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/09 14:56:04 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
+
+	// print_list(*stack_a, *stack_b);
+	// ft_output_check(stack_a, 1);
 
 /// WORKING READABLE SAVE
 // void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b)

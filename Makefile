@@ -42,6 +42,7 @@ ALGO =	algorithms/ft_redirect.c \
 		algorithms/ft_five_elem_sort.c \
 		algorithms/ft_hundred_elem_sort.c \
 		algorithms/ft_output_check.c \
+		algorithms/radix_sort.c \
 
 SRCS =	$(ALGO) \
 		$(LIBFT) \

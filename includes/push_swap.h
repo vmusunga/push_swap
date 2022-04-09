@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vic <vic@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/07 16:23:22 by vic              ###   ########.fr       */
+/*   Updated: 2022/04/09 16:19:49 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	print_list(t_list *stack_a, t_list *stack_b);
 int		ft_check_doubles(int *tab, int i);
 int		ft_error(int *tab, int i, char *input);
 char	**ft_free(char **tab, int x);
+void	ft_exit();
 char	*ft_tabtab_to_tab(char **tab);
 int		ft_count_double_tab(char **tab);
 int		ft_wich_half(t_list **stack, int min);
@@ -89,6 +90,9 @@ void	ft_five_elem_sort(t_list **stack_a, t_list **stack_b, int len);
 void	ft_hundred_elem_sort(t_list **stack_a, t_list **stack_b);
 int		ft_output_check(t_list **stack_a, int i);
 void	ft_five_hundred_elem_sort(t_list **stack_a, t_list **stack_b);
+void	ft_index_list(int *tab, t_list **stack_a);
+void	ft_index(t_utils *utils, int *tab0, int *tab1);
+void	ft_sorting(t_list **stack_a, t_list **stack_b, t_utils *utils);
 
 //DRAFT
 int		ft_greater_than(t_list *stack, int top_nb);

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:10:47 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/04 15:20:31 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/09 16:28:50 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ void	ft_free2(int *tab1, char *tab2)
 	free(tab1);
 	free(tab2);
 	return ;
+}
+
+void	ft_exit()
+{
+		write(2, "Error\n", 6);
+		exit(EXIT_FAILURE);
 }
 
 int	ft_error(int *new, int i, char *input)
@@ -38,8 +44,6 @@ int	ft_error(int *new, int i, char *input)
 			butt = 4;
 		x++;
 	}
-	if (new[i] >= INT_MAX || new[i] <= INT_MIN)
-		butt = 5;
 	if (butt != 0)
 	{
 		ft_free2(new, input);
