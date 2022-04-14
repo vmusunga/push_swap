@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:10:47 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/09 16:28:50 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/14 11:41:31 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 void	ft_free2(int *tab1, char *tab2)
 {
-	free(tab1);
-	free(tab2);
+	if (tab1)
+		free(tab1);
+	if (tab2)
+		free(tab2);
 	return ;
 }
 
-void	ft_exit()
+void	ft_exit(void)
 {
-		write(2, "Error\n", 6);
-		exit(EXIT_FAILURE);
+	write(2, "Error\n", 6);
+	exit(EXIT_FAILURE);
 }
 
 int	ft_error(int *new, int i, char *input)

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 15:50:09 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/09 16:29:08 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/14 12:05:01 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,12 @@ int	*single_argv(char **argv, t_utils *utils)
 	char	*input;
 
 	input = argv[1];
+	if (ft_isdigit_check(input) != 1)
+		ft_exit();
 	tab = char_to_int(input, utils);
 	if (!tab)
 		return (NULL);
+	free(input);
 	return (tab);
 }
 
@@ -59,6 +62,8 @@ int	*multi_argv(char **argv, t_utils *utils)
 	int		*tab;
 
 	input = ft_tabtab_to_tab(argv);
+	if (ft_isdigit_check(input) != 1)
+		ft_exit();
 	tab = char_to_int(input, utils);
 	if (!tab)
 		return (NULL);

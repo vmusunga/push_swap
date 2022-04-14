@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:22:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2022/04/09 16:19:49 by vmusunga         ###   ########.fr       */
+/*   Updated: 2022/04/14 11:53:21 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ size_t	ft_strlen(const char *str);
 int		ft_atoi(const char *str);
 char	**ft_split(char const *s, char c, int i);
 int		ft_isdigit_extended(int c);
+int		ft_isdigit_check(char *s);
 int		ft_isdigit(int c);
 void	ft_putendl_fd(char *s, int fd);
 
@@ -47,7 +48,7 @@ void	print_list(t_list *stack_a, t_list *stack_b);
 int		ft_check_doubles(int *tab, int i);
 int		ft_error(int *tab, int i, char *input);
 char	**ft_free(char **tab, int x);
-void	ft_exit();
+void	ft_exit(void);
 char	*ft_tabtab_to_tab(char **tab);
 int		ft_count_double_tab(char **tab);
 int		ft_wich_half(t_list **stack, int min);

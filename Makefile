@@ -53,7 +53,7 @@ SRCS =	$(ALGO) \
 
 NAME	=	push_swap
 CC		=	gcc
-FLAGS	=	-Wall -Werror -Wextra
+FLAGS	=	-Wall -Werror -Wextra 
 INCLUDE =	-I include
 BONUS =
 
